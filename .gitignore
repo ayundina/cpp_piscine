@@ -1,0 +1,6 @@
+.DS_Store
+*.dSYM
+megaphone
+phonebook
+*.o
+*.json
