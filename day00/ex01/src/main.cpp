@@ -4,6 +4,7 @@ std::string ShowMenu(void)
 {
   std::string selection;
 
+  system("clear");
   std::cout << "\n\n\tWelcome to your Awesome Phonebook!\n\n";
   std::cout << "\t1. Add new contact\n";
   std::cout << "\t2. Search contact\n";
@@ -11,6 +12,7 @@ std::string ShowMenu(void)
   std::cout << "\tYou selected ";
   std::getline(std::cin, selection);
   std::cout << "\n";
+  std::cout << "\t--------------------------------------------\n";
   return selection;
 }
 
@@ -19,15 +21,18 @@ int SelectContact(int index)
   std::string contact_selected;
   int selected;
 
-  std::cout << "\n\tYou selected ";
+  std::cout << "\tYou selected contact #";
   std::getline(std::cin, contact_selected);
   std::cout << "\n";
+  std::cout << "\t--------------------------------------------\n";
   selected = contact_selected[0] - '0';
   if (selected <= index && selected > 0)
     return selected;
   else
   {
-    std::cout << "\tYour selection is invalid. Try again.\n";
+    std::cout << "\tContact #" << selected << " does not exist or\n";
+    std::cout << "\tyour selection is invalid.\n";
+    std::cout << "\tPress Enter to go to the main menu.\n";
   }
   return 0;
 }
@@ -35,7 +40,12 @@ int SelectContact(int index)
 int Add(Phonebook *phonebook, int index)
 {
   if (index < SIZE)
+  {
+    std::cout << "\tYou are creating contact #" << index + 1 << "/" << SIZE << std::endl;
     phonebook->AddNewContact(index);
+    std::cout << "\n\tNew contact is saved in the Phonebook.\n";
+    std::cout << "\tPress Enter to go to the main menu.\n";
+  }
   else
   {
     std::cout << "\n\t💩 Sorry, your Awesome Phonebook is full. ";
@@ -43,6 +53,7 @@ int Add(Phonebook *phonebook, int index)
   }
   if (index < SIZE)
     index += 1;
+  std::cin.ignore();
   return index;
 }
 
@@ -50,10 +61,16 @@ void Search(Phonebook phonebook, int index)
 {
   int contact_selected;
 
+  std::cout << "\tSaved contacts:\n";
   phonebook.ShowAllContacts(index);
+  std::cout << "\n\tSelect contact to view details\n\n";
   contact_selected = SelectContact(index);
   if (contact_selected)
+  {
     phonebook.PrintOneContact(contact_selected - 1);
+    std::cout << "\n\tPress Enter to go to the main menu.\n";
+  }
+  std::cin.ignore();
   return;
 }
 
@@ -68,11 +85,13 @@ int main()
     if (menu_selection[0] == '1')
     {
       index = Add(&phonebook, index);
+      // std::cin.ignore();
       menu_selection = ShowMenu();
     }
     else if (menu_selection[0] == '2')
     {
       Search(phonebook, index);
+      // std::cin.ignore();
       menu_selection = ShowMenu();
     }
     else if (menu_selection[0] == '3')
