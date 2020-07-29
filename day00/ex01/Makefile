@@ -1,6 +1,6 @@
 NAME = phonebook
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror -g
+CXXFLAGS = -Wall -Wextra -Werror
 FILES = main ClassContact ClassPhonebook
 HEADERS = ClassContact ClassPhonebook
 SRC = $(FILES:%=src/%.cpp)
