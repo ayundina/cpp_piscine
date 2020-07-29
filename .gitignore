@@ -4,3 +4,7 @@ megaphone
 phonebook
 *.o
 *.json
+*.mp4
+*.mov
+*.prproj
+*.png
