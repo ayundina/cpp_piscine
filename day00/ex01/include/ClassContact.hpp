@@ -25,6 +25,9 @@ public:
   void New(void);
   void PrintAllContacts(int index);
   void PrintContact(void);
+
+private:
+  void PrintLimitedWidthField(std::string data, int width);
 };
 
 #endif

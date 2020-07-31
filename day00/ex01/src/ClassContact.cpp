@@ -40,7 +40,7 @@ void Contact::New(void)
   return;
 }
 
-void PrintLimitedWidthField(std::string data, int width)
+void Contact::PrintLimitedWidthField(std::string data, int width)
 {
   if ((int)data.length() > (width - 1))
   {
