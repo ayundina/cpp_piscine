@@ -31,3 +31,4 @@ Recreat source code for the lost Account.class.cpp based on .hpp, tests and old 
 cd; cd Desktop/cpp_piscine/day00/ex02/; make
 ./account
 ```
+![account.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day00/gif/account.jpg)
