@@ -3,7 +3,7 @@
 ## Clone
 To copy on your Desktop
 ```
-cd; cd Desktop/; git clone https://github.com/ayundina/cpp_piscine.git cpp_piscine; cd cpp_piscine/
+cd; cd Desktop/; git clone https://github.com/ayundina/cpp_piscine.git cpp_piscine
 ```
 
 ## Build&Run
@@ -18,9 +18,16 @@ cd; cd Desktop/cpp_piscine/day00/ex00/; make
 ![megaphone.gif](https://github.com/ayundina/cpp_piscine/blob/master/day00/gif/megaphone_1.gif)
 
 **day00 ex01**<br>
-A phonebook to save 8 contacts and loose them all by exit. Run and follow the navigation.
+A phonebook to save 8 contacts and lose them all by the exit. Run and follow the navigation.
 ```
 cd; cd Desktop/cpp_piscine/day00/ex01/; make
 ./phonebook
 ```
-![phonebook.gif](https://github.com/ayundina/cpp_piscine/blob/master/day00/gif/phonebook.gif)
+![phonebook.gif](https://github.com/ayundina/cpp_piscine/blob/master/day00/gif/phonebook_1.gif)
+
+**day00 ex02**<br>
+Recreat source code for the lost Account.class.cpp based on .hpp, tests and old .log file.
+```
+cd; cd Desktop/cpp_piscine/day00/ex02/; make
+./account
+```
