@@ -1,7 +1,7 @@
 NAME = account
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror
-FILES = test
+FILES = tests Account.class
 HEADERS = Account.class
 SRC = $(FILES:%=src/%.cpp)
 OBJ = $(FILES:%=obj/%.o)
