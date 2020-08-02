@@ -39,9 +39,10 @@ int SelectContact(int index)
 
 int Add(Phonebook *phonebook, int index)
 {
-  if (index < SIZE)
+  if (index < PB_SIZE)
   {
-    std::cout << "\tYou are creating contact #" << index + 1 << "/" << SIZE << std::endl;
+    std::cout << "\tYou are creating contact #";
+    std::cout << index + 1 << "/" << PB_SIZE << std::endl;
     phonebook->AddNewContact(index);
     std::cout << "\n\tNew contact is saved in the Phonebook.\n";
     std::cout << "\tPress Enter to go to the main menu.\n";
@@ -51,7 +52,7 @@ int Add(Phonebook *phonebook, int index)
     std::cout << "\n\t💩 Sorry, your Awesome Phonebook is full. ";
     std::cout << "Please, exit to start again. 💩\n";
   }
-  if (index < SIZE)
+  if (index < PB_SIZE)
     index += 1;
   std::cin.ignore();
   return index;

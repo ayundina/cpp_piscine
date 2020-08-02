@@ -6,6 +6,7 @@
 
 class Contact
 {
+private:
   std::string first_name;
   std::string last_name;
   std::string nickname;
@@ -18,6 +19,8 @@ class Contact
   std::string underwear_color;
   std::string darkest_secret;
 
+  void PrintLimitedWidthField(std::string data, int width);
+
 public:
   Contact(void);
   ~Contact(void);
@@ -25,9 +28,6 @@ public:
   void New(void);
   void PrintAllContacts(int index);
   void PrintContact(void);
-
-private:
-  void PrintLimitedWidthField(std::string data, int width);
 };
 
 #endif

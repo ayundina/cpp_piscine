@@ -4,11 +4,11 @@
 #include "ClassContact.hpp"
 #include <iostream>
 
-#define SIZE 8
+#define PB_SIZE 8
 
 class Phonebook
 {
-  Contact contact[SIZE];
+  Contact contact[PB_SIZE];
 
 public:
   Phonebook(void);
