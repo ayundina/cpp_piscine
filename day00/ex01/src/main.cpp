@@ -86,13 +86,11 @@ int main()
     if (menu_selection[0] == '1')
     {
       index = Add(&phonebook, index);
-      // std::cin.ignore();
       menu_selection = ShowMenu();
     }
     else if (menu_selection[0] == '2')
     {
       Search(phonebook, index);
-      // std::cin.ignore();
       menu_selection = ShowMenu();
     }
     else if (menu_selection[0] == '3')
