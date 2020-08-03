@@ -3,6 +3,7 @@
 megaphone
 phonebook
 account
+pony
 *.o
 *.json
 *.mp4
