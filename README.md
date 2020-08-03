@@ -32,3 +32,11 @@ cd; cd Desktop/cpp_piscine/day00/ex02/; make
 ./account
 ```
 ![account.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day00/gif/account.jpg)
+
+**day01 ex00**
+Stack vs heap allocation
+```
+cd; cd Desktop/cpp_piscine/day01/ex00/; make
+./pony
+```
+![pony.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/pony.jpg)
