@@ -3,9 +3,12 @@ CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror
 FILES = main ClassContact ClassPhonebook
 HEADERS = ClassContact ClassPhonebook
-SRC = $(FILES:%=src/%.cpp)
-OBJ = $(FILES:%=obj/%.o)
-INCLUDE = $(HEADERS:%=include/%.hpp)
+SRCFOLDER = src
+SRC = $(FILES:%=$(SRCFOLDER)/%.cpp)
+OBJFOLDER = obj
+OBJ = $(FILES:%=$(OBJFOLDER)/%.o)
+INCLFOLDER = include
+INCLUDE = $(HEADERS:%=$(INCLFOLDER)/%.hpp)
 RM = rm -f
 GREEN = \033[32m
 NC = \033[0m
@@ -14,11 +17,14 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ echo "${GREEN}	Compiled object files${NC}"
-	$(CXX) $(CXXFLAGS) -I ./include $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) -I ./$(INCLFOLDER) $(OBJ) -o $(NAME)
 	@ echo "${GREEN}	Compiled" $(NAME) "${NC}"
 
-obj/%.o : src/%.cpp $(INCLUDE)
+$(OBJFOLDER)/%.o : $(SRCFOLDER)/%.cpp $(INCLUDE) $(OBJFOLDER)
 	$(CXX) $(CXXFLAGS) $< -c -o $@
+
+$(OBJFOLDER):
+	mkdir -p $(OBJFOLDER)
 
 clean:
 	$(RM) $(OBJ)

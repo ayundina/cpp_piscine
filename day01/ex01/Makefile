@@ -1,12 +1,10 @@
-NAME = pony
+NAME = ex01
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
-FILES = main Pony
-HEADERS = Pony
+FILES = ex01
 SRC = $(FILES:%=src/%.cpp)
 OBJFOLDER = obj
 OBJ = $(FILES:%=$(OBJFOLDER)/%.o)
-INCLUDE = $(HEADERS:%=include/%.hpp)
 RM = rm -f
 GREEN = \033[32m
 NC = \033[0m
@@ -18,7 +16,7 @@ $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -I ./include $(OBJ) -o $(NAME)
 	@ echo "${GREEN}	Compiled" $(NAME) "${NC}"
 
-obj/%.o : src/%.cpp $(INCLUDE) $(OBJFOLDER)
+obj/%.o : src/%.cpp $(OBJFOLDER)
 	$(CXX) $(CXXFLAGS) $< -c -o $@
 
 $(OBJFOLDER):

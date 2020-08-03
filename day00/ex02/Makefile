@@ -4,7 +4,8 @@ CXXFLAGS = -Wall -Wextra -Werror
 FILES = tests Account.class
 HEADERS = Account.class
 SRC = $(FILES:%=src/%.cpp)
-OBJ = $(FILES:%=obj/%.o)
+OBJFOLDER = obj
+OBJ = $(FILES:%=$(OBJFOLDER)/%.o)
 INCLUDE = $(HEADERS:%=include/%.hpp)
 RM = rm -f
 GREEN = \033[32m
@@ -17,8 +18,11 @@ $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -I ./include $(OBJ) -o $(NAME)
 	@ echo "${GREEN}	Compiled" $(NAME) "${NC}"
 
-obj/%.o : src/%.cpp $(INCLUDE)
+obj/%.o : src/%.cpp $(INCLUDE) $(OBJFOLDER)
 	$(CXX) $(CXXFLAGS) $< -c -o $@
+
+$(OBJFOLDER):
+	mkdir -p $(OBJFOLDER)
 
 clean:
 	$(RM) $(OBJ)
