@@ -32,7 +32,6 @@ Pony::Pony(std::string name, std::string color, std::string fav_food)
 
 Pony::~Pony(void)
 {
-
   std::cout << "\tPony from " << &_name << " was removed\n";
   return;
 }
