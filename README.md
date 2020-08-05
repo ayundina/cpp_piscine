@@ -40,3 +40,11 @@ cd; cd Desktop/cpp_piscine/day01/ex00/; make
 ./pony
 ```
 ![pony.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/pony.jpg)
+
+**day01 ex02**<br>
+Create a zombie "attack" of random zombies with entered number and type of zombies
+```
+cd; cd Desktop/cpp_piscine/day01/ex02/; make
+./zombie
+```
+![zombie.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/zombie.jpg)
