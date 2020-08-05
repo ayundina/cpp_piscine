@@ -1,28 +1,27 @@
 NAME = account
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -g
 FILES = tests Account.class
 HEADERS = Account.class
-SRC = $(FILES:%=src/%.cpp)
+SRCFOLDER = src
+SRC = $(FILES:%=$(SRCFOLDER)/%.cpp
 OBJFOLDER = obj
 OBJ = $(FILES:%=$(OBJFOLDER)/%.o)
-INCLUDE = $(HEADERS:%=include/%.hpp)
+INCLFOLDER = include
+INCLUDE = $(HEADERS:%=$(INCLFOLDER)/%.hpp)
 RM = rm -f
 GREEN = \033[32m
 NC = \033[0m
 
 all: $(NAME)
-
 $(NAME): $(OBJ)
 	@ echo "${GREEN}	Compiled object files${NC}"
-	$(CXX) $(CXXFLAGS) -I ./include $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) -I ./$(INCLFOLDER) $(OBJ) -o $(NAME)
 	@ echo "${GREEN}	Compiled" $(NAME) "${NC}"
 
-obj/%.o : src/%.cpp $(INCLUDE) $(OBJFOLDER)
+$(OBJFOLDER)/%.o : $(SRCFOLDER)/%.cpp $(INCLUDE)
+	@ mkdir -p $(OBJFOLDER)
 	$(CXX) $(CXXFLAGS) $< -c -o $@
-
-$(OBJFOLDER):
-	mkdir -p $(OBJFOLDER)
 
 clean:
 	$(RM) $(OBJ)
@@ -30,6 +29,6 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
-	@ echo "${GREEN}	Cleaned" $(NAME) "${NC}" 
+	@ echo "${GREEN}	Cleaned" $(NAME) "${NC}"
 
 re: fclean all

@@ -1,8 +1,8 @@
-NAME = pony
+NAME = zombie
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
-FILES = main Pony
-HEADERS = Pony
+FILES = main Zombie ZombieEvent userChoice startZombieWave
+HEADERS = main Zombie ZombieEvent
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp
 OBJFOLDER = obj
