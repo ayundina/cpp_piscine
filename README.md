@@ -42,7 +42,7 @@ cd; cd Desktop/cpp_piscine/day01/ex00/; make
 ![pony.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/pony.jpg)
 
 **day01 ex02**<br>
-Create a zombie "attack" of random zombies with entered number and type of zombies
+Create a zombie "attack" of random zombies with the entered number and type of zombies.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex02/; make
 ./zombie
@@ -50,7 +50,7 @@ cd; cd Desktop/cpp_piscine/day01/ex02/; make
 ![zombie.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/zombie.jpg)
 
 **day01 ex03**<br>
-Create a zombie "attack" of random zombies with entered number. Same as in previous exercise, but with a better logic of classes and dynamic memory allocation of double pointer - pointer to array of pointers to Zombie class.
+Create a zombie "attack" of random zombies with the entered number. Same as in the previous exercise, but with a better logic of classes and dynamic memory allocation of a double-pointer - pointer to an array of pointers to Zombie class.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex03/; make
 ./zombie_horde
