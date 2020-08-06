@@ -6,13 +6,6 @@ void Zombie::announce(void) const
 	return;
 }
 
-Zombie::Zombie(void)
-{
-	_name = "No_name";
-	_type = "No_type";
-	return;
-}
-
 Zombie::Zombie(std::string name)
 {
 	_name = name;
