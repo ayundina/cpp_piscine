@@ -1,9 +1,13 @@
 .DS_Store
 *.dSYM
+
 megaphone
 phonebook
 account
 pony
+zombie
+zombie_horde
+
 *.o
 *.json
 *.mp4
