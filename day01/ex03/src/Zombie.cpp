@@ -2,10 +2,6 @@
 
 void Zombie::announce(void) const
 {
-	// std::cout << "\t" << "sizeof " << sizeof(_type) << "\n";
-	// std::cout << "\t" << "sizeof " << sizeof(&_type) << "\n";
-	// std::cout << "\t" << "sizeof " << sizeof(_name) << "\n";
-	// std::cout << "\t" << "sizeof " << sizeof(&_name) << "\n";
 	std::cout << "\t" << _type << " zombie " << _name << " says 'Braaaaaaiiins!'\n";
 	return;
 }
