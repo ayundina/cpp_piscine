@@ -5,8 +5,12 @@ megaphone
 phonebook
 account
 pony
+ex01
 zombie
 zombie_horde
+ex04
+brain
+
 
 *.o
 *.json

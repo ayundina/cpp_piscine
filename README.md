@@ -41,6 +41,9 @@ cd; cd Desktop/cpp_piscine/day01/ex00/; make
 ```
 ![pony.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/pony.jpg)
 
+**day01 ex01**<br>
+Make sure nothing leaks.
+
 **day01 ex02**<br>
 Create a zombie "attack" of random zombies with the entered number and type of zombies.
 ```
@@ -56,3 +59,17 @@ cd; cd Desktop/cpp_piscine/day01/ex03/; make
 ./zombie_horde
 ```
 ![zombie_horde.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/zombie_horde.jpg)
+
+**day01 ex04**<br>
+Use a reference to a string.
+```
+cd; cd Desktop/cpp_piscine/day01/ex04/; make
+./ex04
+```
+
+**day01 ex05**<br>
+Understand accessors.
+```
+cd; cd Desktop/cpp_piscine/day01/ex05/; make
+./brain
+```
