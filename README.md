@@ -73,3 +73,9 @@ Understand accessors.
 cd; cd Desktop/cpp_piscine/day01/ex05/; make
 ./brain
 ```
+**day01 ex06**<br>
+Reference vs pointer.
+```
+cd; cd Desktop/cpp_piscine/day01/ex06/; make
+./human
+```
