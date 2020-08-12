@@ -80,7 +80,7 @@ cd; cd Desktop/cpp_piscine/day01/ex06/; make
 ./human
 ```
 **day01 ex07**<br>
-Make "Find and Replace" programm. The programm takes 3 parameters: file string_to_find string_to_place_instead. The result is written into new file.replace 
+Make the "Find and Replace" program. The program takes 3 parameters: file string_to_find string_to_place_instead. The result is written into a new file.replace.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex07/; make
 ./replace test "o" "-O-"
