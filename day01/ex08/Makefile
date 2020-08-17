@@ -1,8 +1,8 @@
 NAME = human
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
-FILES = main ClassHuman 
-HEADERS = ClassHuman
+FILES = main Human 
+HEADERS = Human
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp
 OBJFOLDER = obj

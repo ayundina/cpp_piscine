@@ -1,4 +1,4 @@
-#include "../include/ClassHuman.hpp"
+#include "../include/Human.hpp"
 
 void Human::meleeAttack(std::string const & target)
 {
@@ -34,7 +34,6 @@ void Human::action(std::string const & action_name, std::string const & target)
 	{
 		std::cout << "\t" << action_name << " is incorrect action name\n"; 
 	}
-	
 	return;
 }
 
