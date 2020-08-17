@@ -86,3 +86,10 @@ cd; cd Desktop/cpp_piscine/day01/ex07/; make
 ./replace test "o" "-O-"
 ```
 ![replace.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/replace.jpg)
+
+**day01 ex08**<br>
+Invoke functions by using a pointer to function member.
+```
+cd; cd Desktop/cpp_piscine/day01/ex08/; make
+./human
+```
