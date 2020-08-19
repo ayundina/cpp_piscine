@@ -12,6 +12,8 @@ ex04
 brain
 human
 replace
+logger
+logger.txt
 
 
 *.o
