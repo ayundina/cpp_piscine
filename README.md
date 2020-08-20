@@ -88,15 +88,23 @@ cd; cd Desktop/cpp_piscine/day01/ex07/; make
 ![replace.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/replace.jpg)
 
 **day01 ex08**<br>
-Invoke functions by using a pointer to member function. This was achieved by using array of pointers to member functions.
+Invoke functions by using a pointer to member function. This was achieved by using an array of pointers to member functions.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex08/; make
 ./human
 ```
 
 **day01 ex09**<br>
-As in previous excersise, invoke functions by using a pointer to member function, but in this excersise I used std::map with string and function pointer pair
+As in the previous exercise, invoke functions by using a pointer to member function, but in this exercise, I used std::map with string and function pointer pair.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex09/; make
 ./logger
 ```
+
+**day01 ex10**<br>
+cato9tails is a program that does the same thing as the system’s cat command without options. It can read from files and/or the standard input.
+```
+cd; cd Desktop/cpp_piscine/day01/ex10/; make
+./cato9tails file1 file2 file3
+```
+![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/cato9tails.jpg)
