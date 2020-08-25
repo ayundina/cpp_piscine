@@ -7,7 +7,6 @@ your testing, this is not as simple as it seems.
 */
 
 #include "../include/ClassCat.hpp"
-#include <iostream>
 
 int fileIsGiven(int argc, char **argv)
 {
@@ -39,6 +38,5 @@ int main(int argc, char **argv)
 	{
 		cat.standardInput();
 	}
-
 	return 0;
 }

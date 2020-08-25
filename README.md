@@ -108,3 +108,10 @@ cd; cd Desktop/cpp_piscine/day01/ex10/; make
 ./cato9tails file1 file2 file3
 ```
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/cato9tails.jpg)
+
+**day02 ex01**<br>
+Write a canonical class to represent fixed point numbers
+```
+cd; cd Desktop/cpp_piscine/day02/ex01/; make
+./fixed
+```

@@ -15,6 +15,7 @@ replace
 logger
 logger.txt
 cato9tails
+fixed
 
 
 *.o
