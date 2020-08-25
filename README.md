@@ -1,6 +1,6 @@
 # cpp piscine
 
-## Table of Content
+**Table of Contents**<br>
 [Clone](#clone)<br>
 [Build&Run](#build_and_run)<br>
 [Day00](#day00)<br>
