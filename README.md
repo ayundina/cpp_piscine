@@ -1,14 +1,25 @@
 # cpp piscine
 
+## Table of Content
+[Clone](#clone)
+[Build&Run](#build_and_run)
+[Day00](#day00)
+[Day01](#day01)
+[Day02](#day02)
+
+<a name="clone"></a>
 ## Clone
 To copy on your Desktop
 ```
 cd; cd Desktop/; git clone https://github.com/ayundina/cpp_piscine.git cpp_piscine
 ```
 
+<a name="build_and_run"></a>
 ## Build&Run
 Each day folder has exercises folder.
 
+<a name="day00"></a>
+## Day00
 **day00 ex00**<br>
 Turn arguments into uppercase.
 ```
@@ -33,6 +44,8 @@ cd; cd Desktop/cpp_piscine/day00/ex02/; make
 ```
 ![account.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day00/gif/account.jpg)
 
+<a name="day01"></a>
+## Day01
 **day01 ex00**<br>
 Stack vs heap allocation
 ```
@@ -109,6 +122,8 @@ cd; cd Desktop/cpp_piscine/day01/ex10/; make
 ```
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/cato9tails.jpg)
 
+<a name="day02"></a>
+## Day02
 **day02 ex01**<br>
 Write a canonical class to represent fixed point numbers.
 ```
