@@ -1,47 +1,112 @@
 /*
-
-Add the following public constructors and public member functions to your class:
-
-1. constructor (takes a constant integer) and converts it to
-the correspondant fixed(8) point value. The fractional bits value is initialized like
-in ex00.
-
-2. constructor (takes a constant floating point) and converts
-it to the correspondant fixed(8) point value. The fractional bits value is initialized
-like in ex00.
-
-3. member function:
-float toFloat( void ) const;
-converts the fixed point value to a floating point value.
-
-4. member function:
-int toInt( void ) const;
-converts the fixed point value to an integer value.
-
-You will also add the following function overload to your header (declaration) and
-source (definition) files:
-5. « operator:
-inserts a floating point representation of the
-fixed point value into the parameter output stream.
-
+$> ./a.out
+0
+0.00390625
+0.00390625
+0.00390625
+0.0078125
+10.1016
+10.1016
+$>
 */
 
 #include "../include/Fixed.hpp"
+#include <cfloat>
+
+void testComparisonOperators(Fixed &a, const Fixed &b)
+{
+	int a_raw = a.getRawBits();
+	int b_raw = b.getRawBits();
+
+	if (b > a && b_raw > a_raw)
+		std::cout << "\n b>a = true" << std::endl;
+	else
+		std::cout << "ERROR: operator > overload is incorrect" << std::endl;
+
+	if (a < b && a_raw < b_raw)
+		std::cout << " a<b = true" << std::endl;
+	else
+		std::cout << "ERROR: operator < overload is incorrect" << std::endl;
+
+	Fixed c = a;
+	int c_raw = c.getRawBits();
+
+	if (b >= a && c >= a && b_raw >= a_raw && c_raw >= a_raw)
+		std::cout << "b>=a = true" << std::endl;
+	else
+		std::cout << "ERROR: operator >= overload is incorrect" << std::endl;
+
+	if (a <= b && c <= a && a_raw <= b_raw && c_raw <= a_raw)
+		std::cout << "a<=b = true" << std::endl;
+	else
+		std::cout << "ERROR: operator <= overload is incorrect" << std::endl;
+
+	if (a == c && a_raw == c_raw)
+		std::cout << "a==c = true" << std::endl;
+	else
+		std::cout << "ERROR: operator == overload is incorrect" << std::endl;
+
+	if (b != a && b_raw != a_raw)
+		std::cout << "b!=a = true" << std::endl;
+	else
+		std::cout << "ERROR: operator != overload is incorrect" << std::endl;
+	return;
+}
+
+void testArithmeticOperators(Fixed &a, Fixed &b)
+{
+	float a_float = a.toFloat();
+	float b_float = b.toFloat();
+
+	std::cout << "\n  a = " << a_float << std::endl;
+	std::cout << "  b = " << b_float << std::endl;
+	if ((a + b) == (a_float + b_float))
+		std::cout << "a+b = " << a + b << std::endl;
+	else
+		std::cout << "EROR: operator + overload is incorrect" << std::endl;
+
+	if ((a - b) == (a_float - b_float))
+		std::cout << "a-b = " << a - b << std::endl;
+	else
+		std::cout << "EROR: operator - overload is incorrect" << std::endl;
+
+	if ((a * b) == (a_float * b_float))
+		std::cout << "a*b = " << a * b << std::endl;
+	else
+		std::cout << "EROR: operator * overload is incorrect" << std::endl;
+
+	if ((a / b) == (a_float / b_float))
+		std::cout << "a/b = " << a / b << std::endl;
+	else
+		std::cout << "EROR: operator / overload is incorrect" << std::endl;
+	return;
+}
 
 int main(void)
 {
 	Fixed a;
-	Fixed const b(10);
-	Fixed const c(42.42f);
-	Fixed const d(b);
-	a = Fixed(1234.4321f);
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	Fixed const b(Fixed(5.05f) * Fixed(2));
+
+	std::cout << "  a = " << a << std::endl;
+	std::cout << "++a = " << ++a << std::endl;
+	std::cout << "  a = " << a << std::endl;
+	std::cout << "a++ = " << a++ << std::endl;
+	std::cout << "  a = " << a << std::endl;
+	std::cout << "  b = " << b << std::endl;
+	std::cout << "max = " << max(a, b) << std::endl;
+	std::cout << "min = " << min(a, b) << std::endl;
+
+	std::cout << "\n  a = " << a << std::endl;
+	std::cout << "--a = " << --a << std::endl;
+	std::cout << "  a = " << a << std::endl;
+	std::cout << "a-- = " << a-- << std::endl;
+	std::cout << "  a = " << a << std::endl;
+
+	// >, <, >=, <=, == and !=.
+	testComparisonOperators(a, b);
+	// +, -, *, and /
+	Fixed c((float)3.14);
+	Fixed d((float)-2.08);
+	testArithmeticOperators(c, d);
 	return 0;
 }

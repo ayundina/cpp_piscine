@@ -123,8 +123,16 @@ cd; cd Desktop/cpp_piscine/day01/ex10/; make
 
 <a name="day02"></a>
 ## Day02
-**day02 ex01**<br>
+**day02 ex00**<br>
 Write a canonical class to represent fixed point numbers.
+```
+cd; cd Desktop/cpp_piscine/day02/ex00/; make
+./fixed
+```
+![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_00.jpg)
+
+**day02 ex01**<br>
+Add more members to the same Fixed class for a better representation of fixed point number.
 ```
 cd; cd Desktop/cpp_piscine/day02/ex01/; make
 ./fixed
@@ -132,7 +140,7 @@ cd; cd Desktop/cpp_piscine/day02/ex01/; make
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_01.jpg)
 
 **day02 ex02**<br>
-Add more members to the same Fixed class for a better representation of fixed point number.
+Add public member operator overloads to the same Fixed class for comparison, arithmetic and increment/decrement operations.
 ```
 cd; cd Desktop/cpp_piscine/day02/ex02/; make
 ./fixed
