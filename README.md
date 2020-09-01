@@ -162,8 +162,8 @@ A program named eval_expr that evaluates simple arithmetic expressions as fixed-
 ```
 3. traverse the tree to evaluate arithmetic expressions.
 ```
-cd; cd Desktop/cpp_piscine/day02/ex02/; make
-./fixed
+cd; cd Desktop/cpp_piscine/day02/ex03/; make
+./eval_expr "( 18.18 + 3.03 ) * 2"
 ```
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/eval_expr.jpg)
 
