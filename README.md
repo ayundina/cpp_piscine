@@ -124,7 +124,7 @@ cd; cd Desktop/cpp_piscine/day01/ex10/; make
 <a name="day02"></a>
 ## Day02
 **day02 ex00**<br>
-Write a canonical class to represent fixed point numbers.
+Write a canonical class to represent fixed-point numbers.
 ```
 cd; cd Desktop/cpp_piscine/day02/ex00/; make
 ./fixed
@@ -132,7 +132,7 @@ cd; cd Desktop/cpp_piscine/day02/ex00/; make
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_00.jpg)
 
 **day02 ex01**<br>
-Add more members to the same Fixed class for a better representation of fixed point number.
+Add more members to the same Fixed class for a better representation of fixed-point number.
 ```
 cd; cd Desktop/cpp_piscine/day02/ex01/; make
 ./fixed
@@ -146,3 +146,24 @@ cd; cd Desktop/cpp_piscine/day02/ex02/; make
 ./fixed
 ```
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_02.jpg)
+
+**day02 ex03**<br>
+A program named eval_expr that evaluates simple arithmetic expressions as fixed-point values. I used Edsger Dijkstra's "Shunting Yard" algorithm to 
+1. represent normal arithmetic expression (infix) intro reverse polish notation (postfix), 
+`( 18.18 + 3.03 ) * 2` turn into
+`18.18 3.03 + 2 *`
+2. build a binary tree based on reverse polish notation expression,
+```
+    *
+   / \
+  2   +
+     / \
+18.18   3.03
+```
+3. traverse the tree to evaluate arithmetic expressions.
+```
+cd; cd Desktop/cpp_piscine/day02/ex02/; make
+./fixed
+```
+![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/eval_expr.jpg)
+
