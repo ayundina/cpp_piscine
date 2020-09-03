@@ -5,6 +5,7 @@
 [Day00](#day00)<br>
 [Day01](#day01)<br>
 [Day02](#day02)<br>
+[Day03](#day03)<br>
 
 <a name="clone"></a>
 ## Clone
@@ -149,7 +150,7 @@ cd; cd Desktop/cpp_piscine/day02/ex02/; make
 
 **day02 ex03**<br>
 A program named eval_expr that evaluates simple arithmetic expressions as fixed-point values. I used Edsger Dijkstra's "Shunting Yard" algorithm to 
-1. represent normal arithmetic expression (infix) intro reverse polish notation (postfix), 
+1. represent normal arithmetic expression (infix) into reverse polish notation (postfix), 
 `( 18.18 + 3.03 ) * 2` turn into
 `18.18 3.03 + 2 *`
 2. build a binary tree based on reverse polish notation expression,
@@ -167,3 +168,11 @@ cd; cd Desktop/cpp_piscine/day02/ex03/; make
 ```
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/eval_expr.jpg)
 
+<a name="day03"></a>
+## Day03
+**day03 ex00**<br>
+Write a class to represent an assault robot that can use diverse attack types, has armor for damage reduction and loses life points when attacked.
+```
+cd; cd Desktop/cpp_piscine/day03/ex00/; make
+./fragtrap
+```

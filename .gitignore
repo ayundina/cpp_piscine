@@ -16,6 +16,8 @@ logger
 logger.txt
 cato9tails
 fixed
+eval_expr
+fragtrap
 
 *.o
 *.json
