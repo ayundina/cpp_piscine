@@ -171,8 +171,15 @@ cd; cd Desktop/cpp_piscine/day02/ex03/; make
 <a name="day03"></a>
 ## Day03
 **day03 ex00**<br>
-Write a class to represent an assault robot that can use diverse attack types, has armor for damage reduction and loses life points when attacked.
+Write a class to represent an assault robot that can use diverse attack types, has armor for damage reduction and loses life points when attacked. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day03/ex00/; make
-./fragtrap
+./claptrap
+```
+
+**day03 ex01**<br>
+Write another class to represent another assault robot that can use diverse semi-random picked challenges, has armor for damage reduction and loses life points when attacked. Test it with the main.
+```
+cd; cd Desktop/cpp_piscine/day03/ex01/; make
+./claptrap
 ```

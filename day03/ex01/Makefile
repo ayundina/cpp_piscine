@@ -1,8 +1,8 @@
 NAME = claptrap
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
-FILES = main FragTrap
-HEADERS = FragTrap
+FILES = main FragTrap ScavTrap
+HEADERS = FragTrap ScavTrap
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp
 OBJFOLDER = obj

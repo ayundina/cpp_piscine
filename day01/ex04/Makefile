@@ -1,14 +1,11 @@
-NAME = claptrap
+NAME = ex04
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
-FILES = main FragTrap
-HEADERS = FragTrap
+FILES = ex04
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp
 OBJFOLDER = obj
 OBJ = $(FILES:%=$(OBJFOLDER)/%.o)
-INCLFOLDER = include
-INCLUDE = $(HEADERS:%=$(INCLFOLDER)/%.hpp)
 RM = rm -f
 GREEN = \033[32m
 NC = \033[0m
@@ -16,10 +13,10 @@ NC = \033[0m
 all: $(NAME)
 $(NAME): $(OBJ)
 	@ echo "${GREEN}	Compiled object files${NC}"
-	$(CXX) $(CXXFLAGS) -I ./$(INCLFOLDER) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 	@ echo "${GREEN}	Compiled" $(NAME) "${NC}"
 
-$(OBJFOLDER)/%.o : $(SRCFOLDER)/%.cpp $(INCLUDE)
+$(OBJFOLDER)/%.o : $(SRCFOLDER)/%.cpp
 	@ mkdir -p $(OBJFOLDER)
 	$(CXX) $(CXXFLAGS) $< -c -o $@
 

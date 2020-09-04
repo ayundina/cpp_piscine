@@ -5,10 +5,8 @@ megaphone
 phonebook
 account
 pony
-ex01
 zombie
 zombie_horde
-ex04
 brain
 human
 replace
@@ -17,7 +15,7 @@ logger.txt
 cato9tails
 fixed
 eval_expr
-fragtrap
+claptrap
 
 *.o
 *.json
