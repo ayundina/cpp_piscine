@@ -51,6 +51,21 @@ NinjaTrap::~NinjaTrap(void)
 	return;
 }
 
+NinjaTrap &NinjaTrap::operator=(const NinjaTrap &nt)
+{
+	_hit_points = nt._hit_points;
+	_max_hit_points = nt._max_hit_points;
+	_energy_points = nt._energy_points;
+	_max_energy_points = nt._max_energy_points;
+	_level = nt._level;
+	_name = _name + "=" + nt._name;
+	_melee_attack_damage = nt._melee_attack_damage;
+	_ranged_attack_damage = nt._ranged_attack_damage;
+	_armor_damage_reduction = nt._armor_damage_reduction;
+	std::cout << "NINJ4-TP " << _name << " is created\n\n";
+	return *this;
+}
+
 void NinjaTrap::ninjaShoebox(const FragTrap &ft)
 {
 	std::cout << "NINJ4-TP " << _name << " says: \"Bop!\"\n";

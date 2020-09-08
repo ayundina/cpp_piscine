@@ -51,6 +51,7 @@ void testNinjaTrap(void)
 	NinjaTrap nt_copy(nt_one);
 	FragTrap ft_default;
 
+	nt_default = nt_one;
 	nt_one.rangedAttack(nt_copy.getName());
 	nt_copy.takeDamage(nt_one.getRangeDamage());
 

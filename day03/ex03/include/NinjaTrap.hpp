@@ -14,6 +14,8 @@ public:
 	NinjaTrap(const NinjaTrap &nt);
 	~NinjaTrap(void);
 
+	NinjaTrap &operator=(const NinjaTrap &nt);
+
 	void ninjaShoebox(const FragTrap &ft);
 	void ninjaShoebox(const ScavTrap &st);
 	void ninjaShoebox(const NinjaTrap &nt);
