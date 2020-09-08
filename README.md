@@ -185,8 +185,15 @@ cd; cd Desktop/cpp_piscine/day03/ex01/; make
 ```
 
 **day03 ex02**<br>
-Previously wrote classes must inherit their common members from a new parent class. Test it with the main.
+Previously written classes must inherit their common members from a new parent class. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day03/ex02/; make
+./claptrap
+```
+
+**day03 ex03**<br>
+Write another ninja robot class with an existent parent class. Test it with the main.
+```
+cd; cd Desktop/cpp_piscine/day03/ex03/; make
 ./claptrap
 ```
