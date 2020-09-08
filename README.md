@@ -183,3 +183,10 @@ Write another class to represent another assault robot that can use diverse semi
 cd; cd Desktop/cpp_piscine/day03/ex01/; make
 ./claptrap
 ```
+
+**day03 ex02**<br>
+Previously wrote classes must inherit their common members from a new parent class. Test it with the main.
+```
+cd; cd Desktop/cpp_piscine/day03/ex02/; make
+./claptrap
+```
