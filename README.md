@@ -197,3 +197,10 @@ Write another ninja robot class with an existent parent class. Test it with the 
 cd; cd Desktop/cpp_piscine/day03/ex03/; make
 ./claptrap
 ```
+
+**day03 ex04**<br>
+Write one more robot class with multiple inheritances. Test it with the main.
+```
+cd; cd Desktop/cpp_piscine/day03/ex04/; make
+./claptrap
+```
