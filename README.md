@@ -6,6 +6,7 @@
 [Day01](#day01)<br>
 [Day02](#day02)<br>
 [Day03](#day03)<br>
+[Day04](#day04)<br>
 
 <a name="clone"></a>
 ## Clone
@@ -204,3 +205,13 @@ Write one more robot class with multiple inheritances. Test it with the main.
 cd; cd Desktop/cpp_piscine/day03/ex04/; make
 ./claptrap
 ```
+
+<a name="day04"></a>
+## Day04
+**day04 ex00**<br>
+Write a class that can not be instantiated with the default constructor, but still uses Coplien's (canonical) form. Add derived class. Test it with the main.
+```
+cd; cd Desktop/cpp_piscine/day04/ex00/; make
+./claptrap
+```
+![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day04/gif/polymorph.jpg)
