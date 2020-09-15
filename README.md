@@ -21,7 +21,7 @@ Each day folder has exercises folder.
 
 <a name="day00"></a>
 ## Day00
-Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff.
+Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff.<br><br>
 **day00 ex00**<br>
 Turn arguments into uppercase.
 ```
@@ -48,7 +48,7 @@ cd; cd Desktop/cpp_piscine/day00/ex02/; make
 
 <a name="day01"></a>
 ## Day01
-Memory allocation, references, pointers to members and file streams.
+Memory allocation, references, pointers to members and file streams.<br><br>
 **day01 ex00**<br>
 Stack vs heap allocation.
 ```
@@ -127,7 +127,7 @@ cd; cd Desktop/cpp_piscine/day01/ex10/; make
 
 <a name="day02"></a>
 ## Day02
-Ad-hoc polymorphism, operators overload and canonical classes.
+Ad-hoc polymorphism, operators overload and canonical classes.<br><br>
 **day02 ex00**<br>
 Write a canonical class to represent fixed-point numbers.
 ```
@@ -174,7 +174,7 @@ cd; cd Desktop/cpp_piscine/day02/ex03/; make
 
 <a name="day03"></a>
 ## Day03
-Inheritance.
+Inheritance.<br><br>
 **day03 ex00**<br>
 Write a class to represent an assault robot that can use diverse attack types, has armor for damage reduction and loses life points when attacked. Test it with the main.
 ```
@@ -212,7 +212,7 @@ cd; cd Desktop/cpp_piscine/day03/ex04/; make
 
 <a name="day04"></a>
 ## Day04
-Subtype polymorphism, abstract classes, interfaces.
+Subtype polymorphism, abstract classes, interfaces.<br><br>
 **day04 ex00**<br>
 Write a class that can not be instantiated with the default constructor, but still uses Coplien's (canonical) form. Add derived class. Test it with the main.
 ```
