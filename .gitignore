@@ -18,6 +18,7 @@ eval_expr
 claptrap
 polymorph
 fire
+squad
 
 *.o
 *.json

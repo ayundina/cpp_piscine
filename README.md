@@ -227,3 +227,10 @@ Write an abstract class of a weapon and two weapon types classes, that are deriv
 cd; cd Desktop/cpp_piscine/day04/ex01/; make
 ./fire
 ```
+
+**day04 ex02**<br>
+Use two interface classes to create a squad (with the first interface) of marines (with the second interface).
+```
+cd; cd Desktop/cpp_piscine/day04/ex02/; make
+./squad
+```
