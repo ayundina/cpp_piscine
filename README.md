@@ -21,6 +21,7 @@ Each day folder has exercises folder.
 
 <a name="day00"></a>
 ## Day00
+Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff.
 **day00 ex00**<br>
 Turn arguments into uppercase.
 ```
@@ -47,8 +48,9 @@ cd; cd Desktop/cpp_piscine/day00/ex02/; make
 
 <a name="day01"></a>
 ## Day01
+Memory allocation, references, pointers to members and file streams.
 **day01 ex00**<br>
-Stack vs heap allocation
+Stack vs heap allocation.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex00/; make
 ./pony
@@ -125,6 +127,7 @@ cd; cd Desktop/cpp_piscine/day01/ex10/; make
 
 <a name="day02"></a>
 ## Day02
+Ad-hoc polymorphism, operators overload and canonical classes.
 **day02 ex00**<br>
 Write a canonical class to represent fixed-point numbers.
 ```
@@ -171,6 +174,7 @@ cd; cd Desktop/cpp_piscine/day02/ex03/; make
 
 <a name="day03"></a>
 ## Day03
+Inheritance.
 **day03 ex00**<br>
 Write a class to represent an assault robot that can use diverse attack types, has armor for damage reduction and loses life points when attacked. Test it with the main.
 ```
@@ -208,10 +212,18 @@ cd; cd Desktop/cpp_piscine/day03/ex04/; make
 
 <a name="day04"></a>
 ## Day04
+Subtype polymorphism, abstract classes, interfaces.
 **day04 ex00**<br>
 Write a class that can not be instantiated with the default constructor, but still uses Coplien's (canonical) form. Add derived class. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day04/ex00/; make
-./claptrap
+./polymorph
 ```
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day04/gif/polymorph.jpg)
+
+**day04 ex01**<br>
+Write an abstract class of a weapon and two weapon types classes, that are derived from the abstract class. Write a class, that will represent an enemy and two enemy characters, derived from the enemy class. Finally, write a character class to set the world on fire.
+```
+cd; cd Desktop/cpp_piscine/day04/ex01/; make
+./fire
+```

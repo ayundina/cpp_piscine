@@ -17,6 +17,7 @@ fixed
 eval_expr
 claptrap
 polymorph
+fire
 
 *.o
 *.json
