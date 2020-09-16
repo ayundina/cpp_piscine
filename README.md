@@ -234,3 +234,20 @@ Use two interface classes to create a squad (with the first interface) of marine
 cd; cd Desktop/cpp_piscine/day04/ex02/; make
 ./squad
 ```
+
+**day04 ex03**<br>
+In short, create classes based on abstract classes and interfaces, and feel the taste of polymorphism:
+An abstract class 'AMateria' is a base class for 'Cure' and 'Ice' classes. 
+An interface class 'ICharacter' is a base class for 'Character'.
+An interface class 'IMateriasource' is a base class for 'MateriaSource'.
+
+In main:
+1. 'MateriaSource' learns two materias - 'Cure' and 'Ice';
+2. A 'Character' is initialized;
+3. Two materias are created in 'MateriaSource' and passed to the 'Character';
+4. Materias are applied by the 'Character' to another 'Character'.
+
+```
+cd; cd Desktop/cpp_piscine/day04/ex03/; make
+./materia
+```

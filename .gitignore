@@ -19,6 +19,7 @@ claptrap
 polymorph
 fire
 squad
+materia
 
 *.o
 *.json
