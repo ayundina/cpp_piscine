@@ -21,8 +21,8 @@ Each day folder has exercises folder.
 
 <a name="day00"></a>
 ## Day00
-Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff.<br><br>
-**day00 ex00**<br>
+Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff.<br>
+<br>**day00 ex00**<br>
 Turn arguments into uppercase.
 ```
 cd; cd Desktop/cpp_piscine/day00/ex00/; make
@@ -48,8 +48,8 @@ cd; cd Desktop/cpp_piscine/day00/ex02/; make
 
 <a name="day01"></a>
 ## Day01
-Memory allocation, references, pointers to members and file streams.<br><br>
-**day01 ex00**<br>
+Memory allocation, references, pointers to members and file streams.<br>
+<br>**day01 ex00**<br>
 Stack vs heap allocation.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex00/; make
@@ -60,7 +60,7 @@ cd; cd Desktop/cpp_piscine/day01/ex00/; make
 **day01 ex01**<br>
 Make sure nothing leaks.
 
-**day01 ex02**<br>
+<br>**day01 ex02**<br>
 Create a zombie "attack" of random zombies with the entered number and type of zombies.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex02/; make
@@ -83,19 +83,19 @@ cd; cd Desktop/cpp_piscine/day01/ex04/; make
 ./ex04
 ```
 
-**day01 ex05**<br>
+<br>**day01 ex05**<br>
 Understand accessors.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex05/; make
 ./brain
 ```
-**day01 ex06**<br>
+<br>**day01 ex06**<br>
 Reference vs pointer.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex06/; make
 ./human
 ```
-**day01 ex07**<br>
+<br>**day01 ex07**<br>
 Make the "Find and Replace" program. The program takes 3 parameters: file string_to_find string_to_place_instead. The result is written into a new file.replace.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex07/; make
@@ -110,14 +110,14 @@ cd; cd Desktop/cpp_piscine/day01/ex08/; make
 ./human
 ```
 
-**day01 ex09**<br>
+<br>**day01 ex09**<br>
 As in the previous exercise, invoke functions by using a pointer to member function, but in this exercise, I used std::map with string and function pointer pair.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex09/; make
 ./logger
 ```
 
-**day01 ex10**<br>
+<br>**day01 ex10**<br>
 cato9tails is a program that does the same thing as the system’s cat command without options. It can read from files and/or the standard input.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex10/; make
@@ -127,8 +127,8 @@ cd; cd Desktop/cpp_piscine/day01/ex10/; make
 
 <a name="day02"></a>
 ## Day02
-Ad-hoc polymorphism, operators overload and canonical classes.<br><br>
-**day02 ex00**<br>
+Ad-hoc polymorphism, operators overload and canonical classes.<br>
+<br>**day02 ex00**<br>
 Write a canonical class to represent fixed-point numbers.
 ```
 cd; cd Desktop/cpp_piscine/day02/ex00/; make
@@ -174,36 +174,36 @@ cd; cd Desktop/cpp_piscine/day02/ex03/; make
 
 <a name="day03"></a>
 ## Day03
-Inheritance.<br><br>
-**day03 ex00**<br>
+Inheritance.<br>
+<br>**day03 ex00**<br>
 Write a class to represent an assault robot that can use diverse attack types, has armor for damage reduction and loses life points when attacked. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day03/ex00/; make
 ./claptrap
 ```
 
-**day03 ex01**<br>
+<br>**day03 ex01**<br>
 Write another class to represent another assault robot that can use diverse semi-random picked challenges, has armor for damage reduction and loses life points when attacked. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day03/ex01/; make
 ./claptrap
 ```
 
-**day03 ex02**<br>
+<br>**day03 ex02**<br>
 Previously written classes must inherit their common members from a new parent class. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day03/ex02/; make
 ./claptrap
 ```
 
-**day03 ex03**<br>
+<br>**day03 ex03**<br>
 Write another ninja robot class with an existent parent class. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day03/ex03/; make
 ./claptrap
 ```
 
-**day03 ex04**<br>
+<br>**day03 ex04**<br>
 Write one more robot class with multiple inheritances. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day03/ex04/; make
@@ -212,8 +212,8 @@ cd; cd Desktop/cpp_piscine/day03/ex04/; make
 
 <a name="day04"></a>
 ## Day04
-Subtype polymorphism, abstract classes, interfaces.<br><br>
-**day04 ex00**<br>
+Subtype polymorphism, abstract classes, interfaces.<br>
+<br>**day04 ex00**<br>
 Write a class that can not be instantiated with the default constructor, but still uses Coplien's (canonical) form. Add derived class. Test it with the main.
 ```
 cd; cd Desktop/cpp_piscine/day04/ex00/; make
@@ -228,14 +228,14 @@ cd; cd Desktop/cpp_piscine/day04/ex01/; make
 ./fire
 ```
 
-**day04 ex02**<br>
+<br>**day04 ex02**<br>
 Use two interface classes to create a squad (with the first interface) of marines (with the second interface).
 ```
 cd; cd Desktop/cpp_piscine/day04/ex02/; make
 ./squad
 ```
 
-**day04 ex03**<br>
+<br>**day04 ex03**<br>
 In short, create classes based on abstract classes and interfaces, and feel the taste of polymorphism:<br>
 An abstract class 'AMateria' is a base class for 'Cure' and 'Ice' classes.<br>
 An interface class 'ICharacter' is a base class for 'Character'.<br>
