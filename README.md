@@ -236,9 +236,9 @@ cd; cd Desktop/cpp_piscine/day04/ex02/; make
 ```
 
 **day04 ex03**<br>
-In short, create classes based on abstract classes and interfaces, and feel the taste of polymorphism:
-An abstract class 'AMateria' is a base class for 'Cure' and 'Ice' classes. 
-An interface class 'ICharacter' is a base class for 'Character'.
+In short, create classes based on abstract classes and interfaces, and feel the taste of polymorphism:<br>
+An abstract class 'AMateria' is a base class for 'Cure' and 'Ice' classes.<br>
+An interface class 'ICharacter' is a base class for 'Character'.<br>
 An interface class 'IMateriasource' is a base class for 'MateriaSource'.
 
 In main:
