@@ -251,3 +251,11 @@ In main:
 cd; cd Desktop/cpp_piscine/day04/ex03/; make
 ./materia
 ```
+
+<br>**day04 ex04**<br>
+Space mining with polymorphism. There are two classes of lasers (to mine), based on one laser-interface class. And two classes of asteroids (to be mined), again, based on one asteroid-interface class. There are four possible outputs for each combination laser-asteroid, that are implemented by applying polymorphism.
+
+```
+cd; cd Desktop/cpp_piscine/day04/ex04/; make
+./mining
+```

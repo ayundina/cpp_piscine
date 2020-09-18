@@ -20,6 +20,7 @@ polymorph
 fire
 squad
 materia
+mining
 
 *.o
 *.json
