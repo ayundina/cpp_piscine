@@ -7,6 +7,7 @@
 [Day02](#day02)<br>
 [Day03](#day03)<br>
 [Day04](#day04)<br>
+[Day05](#day05)<br>
 
 <a name="clone"></a>
 ## Clone
@@ -258,4 +259,14 @@ Space mining with polymorphism. There are two classes of lasers (to mine), based
 ```
 cd; cd Desktop/cpp_piscine/day04/ex04/; make
 ./mining
+```
+
+<a name="day05"></a>
+## Day05
+Repetition and exceptions.<br>
+<br>**day05 ex00**<br>
+Write a class, where an attempt to initialize that class with an invalid value will throw an exception.
+```
+cd; cd Desktop/cpp_piscine/day05/ex00/; make
+./bureaucrat
 ```
