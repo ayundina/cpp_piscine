@@ -13,8 +13,12 @@ private:
 	static const int _grade_max = 150;
 
 public:
+	Bureaucrat();
 	Bureaucrat(const std::string &, const int &);
+	Bureaucrat(const Bureaucrat &);
 	~Bureaucrat();
+
+	Bureaucrat &operator=(const Bureaucrat &);
 
 	const std::string &getName() const;
 	const int &getGrade() const;

@@ -1,5 +1,12 @@
 #include "../include/Bureaucrat.hpp"
 
+Bureaucrat::Bureaucrat()
+{
+	_name = "Bureaucrat";
+	_grade = _grade_max;
+	return;
+}
+
 Bureaucrat::Bureaucrat(const std::string &name, const int &grade)
 {
 	if (grade < _grade_min)
@@ -12,9 +19,23 @@ Bureaucrat::Bureaucrat(const std::string &name, const int &grade)
 	return;
 }
 
+Bureaucrat::Bureaucrat(const Bureaucrat &b)
+{
+	_name = b._name;
+	_grade = b._grade;
+	return;
+}
+
 Bureaucrat::~Bureaucrat()
 {
 	return;
+}
+
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &b)
+{
+	_name = b._name;
+	_grade = b._grade;
+	return *this;
 }
 
 const std::string &Bureaucrat::getName() const

@@ -4,12 +4,10 @@ int main()
 {
 	try
 	{
-		Bureaucrat *greg = new Bureaucrat("Greg", 150);
-		std::cout << *greg;
-		greg->incrementGrade();
-		std::cout << *greg;
-		delete greg;
-		greg = nullptr;
+		Bureaucrat greg("Greg", 150);
+		std::cout << greg;
+		greg.incrementGrade();
+		std::cout << greg;
 
 		// Bureaucrat *bob = new Bureaucrat("Bob", 1);
 		// std::cout << *bob;
@@ -19,9 +17,10 @@ int main()
 		// bob = nullptr;
 
 		Bureaucrat bob("Bob", 1);
-		std::cout << bob;
-		bob.incrementGrade();
-		std::cout << bob;
+		greg = bob;
+		std::cout << greg;
+		greg.incrementGrade();
+		std::cout << greg;
 	}
 	catch (std::exception &e)
 	{
