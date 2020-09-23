@@ -270,3 +270,10 @@ Write a class, where an attempt to initialize that class with an invalid value w
 cd; cd Desktop/cpp_piscine/day05/ex00/; make
 ./bureaucrat
 ```
+
+<br>**day05 ex01**<br>
+Continue with the previous exercise. Add a new class that interacts with the previous class and throws exceptions when the interaction is out of bounds.
+```
+cd; cd Desktop/cpp_piscine/day05/ex01/; make
+./bureaucrat
+```
