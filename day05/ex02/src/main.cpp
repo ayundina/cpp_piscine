@@ -34,6 +34,7 @@ int main()
 		robotomy.execute(greg);
 		robotomy.execute(greg);
 		pardon.execute(greg);
+		delete f;
 	}
 	catch (const std::exception &e)
 	{

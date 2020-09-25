@@ -18,7 +18,7 @@ public:
 	Form();
 	Form(const std::string &, const int &, const int &);
 	Form(const Form &);
-	~Form();
+	virtual ~Form();
 
 	Form &operator=(const Form &);
 
