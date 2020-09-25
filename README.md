@@ -265,15 +265,21 @@ cd; cd Desktop/cpp_piscine/day04/ex04/; make
 ## Day05
 Repetition and exceptions.<br>
 <br>**day05 ex00**<br>
-Write a class, where an attempt to initialize that class with an invalid value will throw an exception.
+Write a Bureaucrat class, whose level can not be more than 150 and less than 1. If Bureaucrat is initialized with an invalid level, it throws an exception.
 ```
 cd; cd Desktop/cpp_piscine/day05/ex00/; make
 ./bureaucrat
 ```
 
 <br>**day05 ex01**<br>
-Continue with the previous exercise. Add a new class that interacts with the previous class and throws exceptions when the interaction is out of bounds.
+Continue with the previous exercise. Add a Form class that can be signed by a Bureaucrat. A Bureaucrat has to have a certain level to sign a Form otherwise, an exception will be thrown.
 ```
 cd; cd Desktop/cpp_piscine/day05/ex01/; make
+./bureaucrat
+```
+<br>**day05 ex02**<br>
+Continue with the previous exercise. Now Form is an abstract class with private variables. Add three more derived forms with different levels to sign and to execute. Implement the execution of forms.
+```
+cd; cd Desktop/cpp_piscine/day05/ex02/; make
 ./bureaucrat
 ```
