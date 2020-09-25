@@ -283,3 +283,9 @@ Continue with the previous exercise. Now Form is an abstract class with private 
 cd; cd Desktop/cpp_piscine/day05/ex02/; make
 ./bureaucrat
 ```
+<br>**day05 ex03**<br>
+Continue with the previous exercise. Add an Intern class, that will create new Forms. Its method will take two strings, first string refers to the type of requested form, the second string is an argument for the Form's constructor. No ugly if/elseif/elseif/else construction, hint for a pointer to functions.
+```
+cd; cd Desktop/cpp_piscine/day05/ex03/; make
+./bureaucrat
+```
