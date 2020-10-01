@@ -295,3 +295,9 @@ Continue with the previous exercise. Add an OfficeBlock class with one Intern, t
 cd; cd Desktop/cpp_piscine/day05/ex04/; make
 ./bureaucrat
 ```
+<br>**day05 ex05**<br>
+Continue with the previous exercise. Add a CentralBureaucracy class. CentralBureaucracy hires Bureaucrats and forms  OfficeBlocks. With a supplied queue of targets and called doBureaucracy function, some random bit of bureaucracy will be done to each target.
+```
+cd; cd Desktop/cpp_piscine/day05/ex05/; make
+./bureaucrat
+```
