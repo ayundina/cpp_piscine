@@ -289,3 +289,9 @@ Continue with the previous exercise. Add an Intern class, that will create new F
 cd; cd Desktop/cpp_piscine/day05/ex03/; make
 ./bureaucrat
 ```
+<br>**day05 ex04**<br>
+Continue with the previous exercise. Add an OfficeBlock class with one Intern, two Bureaucrats and doBureaucracy function. All output must go to a log file.
+```
+cd; cd Desktop/cpp_piscine/day05/ex04/; make
+./bureaucrat
+```
