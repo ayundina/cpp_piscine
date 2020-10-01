@@ -13,7 +13,7 @@ OfficeBlock::OfficeBlock(Intern *i, Bureaucrat *to_sign, Bureaucrat *to_execute)
 		: _intern(i),
 			_signing_bureaucrat(to_sign),
 			_executing_bureaucrat(to_execute),
-			_log("log.txt")
+			_log("log.txt", std::ofstream::app)
 {
 
 	return;
@@ -49,6 +49,7 @@ void OfficeBlock::doBureaucracy(const std::string &form_type, const std::string 
 			Form *form = _intern->makeForm(form_type, target);
 			_signing_bureaucrat->signForm(*form);
 			_executing_bureaucrat->executeForm(*form);
+			delete form;
 			fclose(stdout);
 		}
 		catch (const std::exception &e)
