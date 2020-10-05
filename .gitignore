@@ -22,6 +22,7 @@ squad
 materia
 mining
 bureaucrat
+convert
 
 *.o
 *.json

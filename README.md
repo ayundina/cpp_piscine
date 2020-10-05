@@ -8,6 +8,7 @@
 [Day03](#day03)<br>
 [Day04](#day04)<br>
 [Day05](#day05)<br>
+[Day06](#day06)<br>
 
 <a name="clone"></a>
 ## Clone
@@ -301,3 +302,14 @@ Continue with the previous exercise. Add a CentralBureaucracy class. CentralBure
 cd; cd Desktop/cpp_piscine/day05/ex05/; make
 ./bureaucrat
 ```
+<a name="day06"></a>
+## Day06
+Casts.<br>
+<br>**day06 ex00**<br>
+Write a program that takes an argument, detects its type (alphabet - 'a', 'c', or numeric - 'nan', 'inf', '4', '-4.2f') and converts the argument to char, int, float and double.
+...
+```
+cd; cd Desktop/cpp_piscine/day06/ex00/; make
+./convert 42.1f
+```
+![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day06/gif/convert.jpg)
