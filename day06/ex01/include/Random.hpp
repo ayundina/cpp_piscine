@@ -10,8 +10,6 @@ class Random
 private:
 	double _fraction;
 
-	int randomInt(int max, int min);
-
 public:
 	Random();
 	Random(const unsigned int &seed);
@@ -23,6 +21,7 @@ public:
 
 	std::string generateString(const size_t &);
 	int generateInt();
+	int randomIntFromRange(int min, int max);
 };
 
 #endif

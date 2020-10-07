@@ -31,7 +31,7 @@ Random::~Random()
 	return;
 }
 
-int Random::randomInt(int max, int min)
+int Random::randomIntFromRange(int min, int max)
 {
 	double range = max - min + 1;
 	double rand_fraction = std::rand() * _fraction;
@@ -47,7 +47,7 @@ std::string Random::generateString(const size_t &size)
 
 	for (size_t i = 0; i < size; i++)
 	{
-		str[i] = randomInt(122, 48);
+		str[i] = randomIntFromRange(48, 122);
 		str[i + 1] = '\0';
 	}
 	return static_cast<std::string>(str);
@@ -55,6 +55,6 @@ std::string Random::generateString(const size_t &size)
 
 int Random::generateInt()
 {
-	int random = randomInt(999, -999);
+	int random = randomIntFromRange(-1000, 1000);
 	return random;
 }
