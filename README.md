@@ -327,7 +327,7 @@ void * serialize(void)
 	a second random array of 8 alphanumerical characters.
 }
 
-Data * deserialize(void * raw)
+Data *deserialize(void *raw)
 {
 	deserialize the raw data to a Data structure defined as 
 	struct Data { std::string s1; int n; std::string s2; }
@@ -338,4 +338,28 @@ Wrap these two functions in a program that proves that everything works as inten
 ```
 cd; cd Desktop/cpp_piscine/day06/ex01/; make
 ./serialize
+```
+<br>**day06 ex02**<br>
+Create three empty classes A, B and C. All three are derived from a Base class. Write tree functions:
+```c++
+Base *generate(void)
+{
+	randomly instanciates A, B or C
+	returns the instance as a Base pointer
+}
+
+void identify_from_pointer(Base *p)
+{
+	displays "A", "B" or "C" according to the real type of p
+}
+
+void identify_from_reference( Base &p)
+{
+	displays "A", "B" or "C" according to the real type of p
+}
+```
+Test with the main. <typeinfo> is forbidden.
+```
+cd; cd Desktop/cpp_piscine/day06/ex02/; make
+./real_type
 ```

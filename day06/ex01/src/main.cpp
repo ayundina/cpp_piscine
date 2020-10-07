@@ -1,6 +1,12 @@
 #include "../include/Data.hpp"
 #include "../include/Random.hpp"
 
+// reinterpret_cast for changing the meaning of bit patterns (§11.5.2)
+
+// reinterpret_cast handles conversions between unrelated types
+// such as an integer to a pointer or
+// a pointer to an unrelated pointer type (§iso.5.2.10).
+
 void *serialize()
 {
 	Random random;

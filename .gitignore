@@ -24,6 +24,7 @@ mining
 bureaucrat
 convert
 serialize
+real_type
 
 *.o
 *.json
