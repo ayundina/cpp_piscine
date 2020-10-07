@@ -23,6 +23,7 @@ materia
 mining
 bureaucrat
 convert
+serialize
 
 *.o
 *.json

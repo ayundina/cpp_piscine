@@ -307,9 +307,35 @@ cd; cd Desktop/cpp_piscine/day05/ex05/; make
 Casts.<br>
 <br>**day06 ex00**<br>
 Write a program that takes an argument, detects its type (alphabet - 'a', 'c', or numeric - 'nan', 'inf', '4', '-4.2f') and converts the argument to char, int, float and double.
-...
 ```
 cd; cd Desktop/cpp_piscine/day06/ex00/; make
 ./convert 42.1f
 ```
 ![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day06/gif/convert.jpg)
+
+<br>**day06 ex01**<br>
+Write two functions:
+```c++
+void * serialize(void)
+{
+	returns the address on the heap of a sequence of bytes that represent
+	a piece of serialized data.
+
+	The serialized data is the concatenation of a random array of
+	8 alphanumerical characters,
+	a random integer and a second random array of
+	8 alphanumerical characters.
+}
+
+Data * deserialize(void * raw)
+{
+	deserialize the raw data to a Data structure defined as 
+	struct Data { std::string s1; int n; std::string s2; }
+	allocated on the heap.
+}
+```
+Wrap these two functions in a program that proves that everything works as intended.
+```
+cd; cd Desktop/cpp_piscine/day06/ex01/; make
+./serialize
+```
