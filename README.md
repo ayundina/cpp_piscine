@@ -321,10 +321,10 @@ void * serialize(void)
 	returns the address on the heap of a sequence of bytes that represent
 	a piece of serialized data.
 
-	The serialized data is the concatenation of a random array of
-	8 alphanumerical characters,
-	a random integer and a second random array of
-	8 alphanumerical characters.
+	The serialized data is the concatenation of
+	a random array of 8 alphanumerical characters,
+	a random integer and
+	a second random array of 8 alphanumerical characters.
 }
 
 Data * deserialize(void * raw)
