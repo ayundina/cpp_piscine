@@ -1,24 +1,20 @@
 # cpp piscine
 
-[Clone](#clone)<br>
-[Build&Run](#build_and_run)<br>
-[Day00](#day00) Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff.<br>
-[Day01](#day01) Memory allocation, references, pointers to members and file streams.<br>
-[Day02](#day02) Ad-hoc polymorphism, operators overload and canonical classes.<br>
-[Day03](#day03) Inheritance.<br>
-[Day04](#day04) Subtype polymorphism, abstract classes, interfaces.<br>
-[Day05](#day05) Repetition and exceptions.<br>
-[Day06](#day06) Casts.<br>
-[Day07](#day07) C++ Templates.<br>
+[Day00](#day00) - Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff.<br>
+[Day01](#day01) - Memory allocation, references, pointers to members and file streams.<br>
+[Day02](#day02) - Ad-hoc polymorphism, operators overload and canonical classes.<br>
+[Day03](#day03) - Inheritance.<br>
+[Day04](#day04) - Subtype polymorphism, abstract classes, interfaces.<br>
+[Day05](#day05) - Repetition and exceptions.<br>
+[Day06](#day06) - Casts.<br>
+[Day07](#day07) - C++ Templates.<br>
 
-<a name="clone"></a>
 ## Clone
 To copy on your Desktop
 ```
 cd; cd Desktop/; git clone https://github.com/ayundina/cpp_piscine.git cpp_piscine
 ```
 
-<a name="build_and_run"></a>
 ## Build&Run
 Each day folder has exercises folder.
 
@@ -368,8 +364,18 @@ cd; cd Desktop/cpp_piscine/day06/ex02/; make
 ## Day07
 C++ Templates.<br>
 <br>**day07 ex00**<br>
-...
+Write templates for functions swap, min and max.
 ```
 cd; cd Desktop/cpp_piscine/day07/ex00/; make
-./template"
+./template
+```
+
+<br>**day07 ex01**<br>
+Function template - iter, takes three parameters:
+1. address of an array
+2. length of the array
+3. function that is called on each element of the array
+```
+cd; cd Desktop/cpp_piscine/day07/ex01/; make
+./template
 ```

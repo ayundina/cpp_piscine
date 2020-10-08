@@ -25,6 +25,7 @@ bureaucrat
 convert
 serialize
 real_type
+template
 
 *.o
 *.json
