@@ -2,13 +2,14 @@
 
 [Clone](#clone)<br>
 [Build&Run](#build_and_run)<br>
-[Day00](#day00)<br>
-[Day01](#day01)<br>
-[Day02](#day02)<br>
-[Day03](#day03)<br>
-[Day04](#day04)<br>
-[Day05](#day05)<br>
-[Day06](#day06)<br>
+[Day00](#day00) Namespace, class, member functions, stdio stream, initialization lists, static, const, and lots of basic stuff.<br>
+[Day01](#day01) Memory allocation, references, pointers to members and file streams.<br>
+[Day02](#day02) Ad-hoc polymorphism, operators overload and canonical classes.<br>
+[Day03](#day03) Inheritance.<br>
+[Day04](#day04) Subtype polymorphism, abstract classes, interfaces.<br>
+[Day05](#day05) Repetition and exceptions.<br>
+[Day06](#day06) Casts.<br>
+[Day07](#day07) C++ Templates.<br>
 
 <a name="clone"></a>
 ## Clone
@@ -362,4 +363,13 @@ Test with the main. <typeinfo> is forbidden.
 ```
 cd; cd Desktop/cpp_piscine/day06/ex02/; make
 ./real_type
+```
+<a name="day07"></a>
+## Day07
+C++ Templates.<br>
+<br>**day07 ex00**<br>
+...
+```
+cd; cd Desktop/cpp_piscine/day07/ex00/; make
+./template"
 ```
