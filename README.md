@@ -379,3 +379,10 @@ Function template - iter, takes three parameters:
 cd; cd Desktop/cpp_piscine/day07/ex01/; make
 ./template
 ```
+
+<br>**day07 ex02**<br>
+Write a class template - Array that contains elements of type T. Allows construction with a given size, copy construction and copy assignment. When accessing an element with operator[], std::exception is thrown if the element is out of limit.
+```
+cd; cd Desktop/cpp_piscine/day07/ex02/; make
+./template
+```

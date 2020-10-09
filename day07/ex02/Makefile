@@ -1,8 +1,8 @@
 NAME = template
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
-FILES = main
-HEADERS =
+FILES = main Array
+HEADERS = Array
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp
 OBJFOLDER = obj
