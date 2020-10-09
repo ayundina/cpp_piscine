@@ -1,18 +1,18 @@
 #include <iostream>
 
 template <typename T>
-void toEach(T &element)
+void print(T &element)
 {
   std::cout << element << std::endl;
   return;
 }
 
 template <typename T>
-void iter(T *array, const int &length, void (*fptr)(T &))
+void iter(T *array, const int &length, void (*function_ptr)(T &))
 {
   for (int i = 0; i < length; i++)
   {
-    fptr(array[i]);
+    function_ptr(array[i]);
   }
   return;
 }
