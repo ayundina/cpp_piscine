@@ -1,4 +1,8 @@
-#include "iter.cpp"
+template <typename T>
+void print(T &element);
+
+template <typename T>
+void iter(T *array, const int &length, void (*function_ptr)(T &));
 
 int main()
 {
