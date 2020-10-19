@@ -8,6 +8,7 @@
 [Day05](#day05) - Repetition and exceptions.<br>
 [Day06](#day06) - Casts.<br>
 [Day07](#day07) - C++ Templates.<br>
+[Day08](#day08) - Templated containers, iterators, algorithms.<br>
 
 ## Clone
 To copy on your Desktop
@@ -385,4 +386,13 @@ Write a class template - Array that contains elements of type T. Allows construc
 ```
 cd; cd Desktop/cpp_piscine/day07/ex02/; make
 ./template
+```
+<a name="day08"></a>
+## Day08
+Templated containers, iterators, algorithms.<br>
+<br>**day08 ex00**<br>
+Write a template function - easyfind - templated on type T, that takes a T and an int. T is a container of int. The function finds given int in T, else it throws an exception.
+```
+cd; cd Desktop/cpp_piscine/day08/ex00/; make
+./easyfind
 ```

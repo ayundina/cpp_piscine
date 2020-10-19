@@ -26,6 +26,7 @@ convert
 serialize
 real_type
 template
+easyfind
 
 *.o
 *.json
