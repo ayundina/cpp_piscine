@@ -396,3 +396,9 @@ Write a template function - easyfind - templated on type T, that takes a T and a
 cd; cd Desktop/cpp_piscine/day08/ex00/; make
 ./easyfind
 ```
+<br>**day08 ex01**<br>
+Implement a class that can hold a given number of ints. With the call of the corresponding function members it will display the shortest and longest span between all the numbers stored in the object.
+```
+cd; cd Desktop/cpp_piscine/day08/ex01/; make
+./span
+```

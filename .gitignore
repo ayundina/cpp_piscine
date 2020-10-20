@@ -27,6 +27,7 @@ serialize
 real_type
 template
 easyfind
+span
 
 *.o
 *.json
