@@ -1,14 +1,34 @@
 #include "../include/span.hpp"
 
-Span::Span(const unsigned int &s)
+Span::Span()
 {
-	_size = s;
+	_size = 10;
+	return;
+}
+
+Span::Span(const unsigned int &size)
+{
+	_size = size;
+	return;
+}
+
+Span::Span(const Span &s)
+{
+	_size = s._size;
+	_container = s._container;
 	return;
 }
 
 Span::~Span()
 {
 	return;
+}
+
+Span &Span::operator=(const Span &s)
+{
+	_size = s._size;
+	_container = s._container;
+	return *this;
 }
 
 void Span::addNumber(const int &n)

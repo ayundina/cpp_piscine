@@ -13,8 +13,12 @@ private:
 	std::vector<int> _container;
 
 public:
-	Span(const unsigned int &);
+	Span();
+	Span(const unsigned int &size);
+	Span(const Span &);
 	~Span();
+
+	Span &operator=(const Span &);
 
 	void addNumber(const int &n);
 	void addRange(const int *begin, const int *end);
