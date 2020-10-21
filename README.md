@@ -402,3 +402,9 @@ Implement a class that can hold a given number of ints. With the call of the cor
 cd; cd Desktop/cpp_piscine/day08/ex01/; make
 ./span
 ```
+<br>**day08 ex02**<br>
+Implement a class - MutantStack - that inherits from std::stack and makes it iterable.
+```
+cd; cd Desktop/cpp_piscine/day08/ex02/; make
+./mutantstack
+```

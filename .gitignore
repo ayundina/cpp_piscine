@@ -28,6 +28,7 @@ real_type
 template
 easyfind
 span
+mutantstack
 
 *.o
 *.json
