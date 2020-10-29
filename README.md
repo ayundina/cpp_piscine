@@ -419,7 +419,7 @@ Mindopen is an interpreter of mindopen language (same as mindfuck, but with othe
 ++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.
 ```
 "Hello world!" written in "cute kittens" mindopen:
-``` mindopen
+``` brainfuck
 ^^^^^^^^(+^^^^(+^^+^^^+^^^+^----_)+^+^+_++^(-)-_)++\+___\^^^^^^^\\^^^\++\-_\-\^^^\______\________\++^\+^^\
 ```
 ```
