@@ -408,3 +408,22 @@ Implement a class - MutantStack - that inherits from std::stack and makes it ite
 cd; cd Desktop/cpp_piscine/day08/ex02/; make
 ./mutantstack
 ```
+<br>**day08 ex03**<br>
+Mindopen is an interpreter of mindopen language (same as mindfuck, but with other symbols for the same commands). Mindopen interpreter does the following:
+1.  Opens a file, that contains mindopen code.
+2. Reads instructions and creates a queue of instructions in memory. The interpreter has Instruction classes, one for each instruction in the language. Each Instruction class has its execute() method. And there is an interface to manipulate all those instructions and store them in a container.
+3. Executes each instruction in the queue.
+
+"Hello world!" written in "brutal" brainfuck:
+``` brainfuck
+++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.
+```
+"Hello world!" written in "cute kittens" mindopen:
+``` mindopen
+^^^^^^^^(+^^^^(+^^+^^^+^^^+^----_)+^+^+_++^(-)-_)++\+___\^^^^^^^\\^^^\++\-_\-\^^^\______\________\++^\+^^\
+```
+```
+cd; cd Desktop/cpp_piscine/day08/ex03/; make
+./mindopen mo_mandelbrot.mo
+```
+![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day08/gif/mindopen.jpg)

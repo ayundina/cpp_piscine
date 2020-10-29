@@ -29,7 +29,10 @@ template
 easyfind
 span
 mutantstack
+mindopen
 
+day08/ex03_*
+*.bf
 *.o
 *.json
 *.mp4
