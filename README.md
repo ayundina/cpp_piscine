@@ -134,7 +134,7 @@ Write a canonical class to represent fixed-point numbers.
 cd; cd Desktop/cpp_piscine/day02/ex00/; make
 ./fixed
 ```
-![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_00.jpg)
+![fixed_00.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_00.jpg)
 
 **day02 ex01**<br>
 Add more members to the same Fixed class for a better representation of fixed-point number.
@@ -142,7 +142,7 @@ Add more members to the same Fixed class for a better representation of fixed-po
 cd; cd Desktop/cpp_piscine/day02/ex01/; make
 ./fixed
 ```
-![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_01.jpg)
+![fixed_01.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_01.jpg)
 
 **day02 ex02**<br>
 Add public member operator overloads to the same Fixed class for comparison, arithmetic and increment/decrement operations.
@@ -150,7 +150,7 @@ Add public member operator overloads to the same Fixed class for comparison, ari
 cd; cd Desktop/cpp_piscine/day02/ex02/; make
 ./fixed
 ```
-![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_02.jpg)
+![fixed_02.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/fixed_02.jpg)
 
 **day02 ex03**<br>
 A program named eval_expr that evaluates simple arithmetic expressions as fixed-point values. I used Edsger Dijkstra's "Shunting Yard" algorithm to 
@@ -170,7 +170,7 @@ A program named eval_expr that evaluates simple arithmetic expressions as fixed-
 cd; cd Desktop/cpp_piscine/day02/ex03/; make
 ./eval_expr "( 18.18 + 3.03 ) * 2"
 ```
-![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/eval_expr.jpg)
+![eval_expr.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day02/gif/eval_expr.jpg)
 
 <a name="day03"></a>
 ## Day03
@@ -219,7 +219,7 @@ Write a class that can not be instantiated with the default constructor, but sti
 cd; cd Desktop/cpp_piscine/day04/ex00/; make
 ./polymorph
 ```
-![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day04/gif/polymorph.jpg)
+![polymorph.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day04/gif/polymorph.jpg)
 
 **day04 ex01**<br>
 Write an abstract class of a weapon and two weapon types classes, that are derived from the abstract class. Write a class, that will represent an enemy and two enemy characters, derived from the enemy class. Finally, write a character class to set the world on fire.
@@ -309,7 +309,7 @@ Write a program that takes an argument, detects its type (alphabet - 'a', 'c', o
 cd; cd Desktop/cpp_piscine/day06/ex00/; make
 ./convert 42.1f
 ```
-![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day06/gif/convert.jpg)
+![convert.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day06/gif/convert.jpg)
 
 <br>**day06 ex01**<br>
 Write two functions:
@@ -414,16 +414,16 @@ Mindopen is an interpreter of mindopen language (same as mindfuck, but with othe
 2. Reads instructions and creates a queue of instructions in memory. The interpreter has Instruction classes, one for each instruction in the language. Each Instruction class has its execute() method. And there is an interface to manipulate all those instructions and store them in a container.
 3. Executes each instruction in the queue.
 
-"Hello world!" written in "brutal" brainfuck:
-``` brainfuck
+"Hello World!" written in "brutal" brainfuck:
+```
 ++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.
 ```
-"Hello world!" written in "cute kittens" mindopen:
-``` brainfuck
+"Hello World!" written in "cute kittens" mindopen:
+```
 ^^^^^^^^(+^^^^(+^^+^^^+^^^+^----_)+^+^+_++^(-)-_)++\+___\^^^^^^^\\^^^\++\-_\-\^^^\______\________\++^\+^^\
 ```
 ```
 cd; cd Desktop/cpp_piscine/day08/ex03/; make
 ./mindopen mo_mandelbrot.mo
 ```
-![cato9tails.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day08/gif/mindopen.jpg)
+![mindopen.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day08/gif/mindopen.jpg)
