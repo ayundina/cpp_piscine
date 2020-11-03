@@ -13,6 +13,13 @@ private:
 	std::string *_postfix_arr;
 	std::string _stack;
 
+	bool findOperand(int &i);
+	bool findOperator(const int &i);
+	bool findLeftParenthesis(const int &i);
+	bool findRigtParenthesis(const int &i);
+	bool dumpStackAtTheEnd(const int &i);
+	void dumpStackToPostfix(int &stack_len, const int &stop_dumping);
+
 public:
 	Infix(const std::string &input);
 	~Infix(void);
@@ -20,14 +27,6 @@ public:
 	void toPostfix(void);
 	std::string *getPostfix(void) const;
 	const int &getPostfixLen(void) const;
-
-	void findOperand(int &i);
-	void findOperator(const int &i);
-	void findLeftParenthesis(const int &i);
-	void findRigtParenthesis(const int &i);
-	void dumpStackToPostfix(int &stack_len, const int &stop_dumping);
-	void dumpStackAtTheEnd(const int &i);
-	// void clearLeftoverPostfixArr(int i);
 };
 
 #endif

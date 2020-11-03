@@ -1,40 +1,5 @@
 #include "../include/classTree.hpp"
 
-void allocateNode(Node **node)
-{
-	*node = new Node;
-	(*node)->left = nullptr;
-	(*node)->right = nullptr;
-	return;
-}
-
-int Tree::writeData(Node *node)
-{
-	static int i = _postfix_len;
-
-	if (i < 0)
-		return i;
-	node->data = _postfix_str[i];
-	// std::cout << "node data: " << _postfix_str[i] << "\n"; //debugging line
-	i--;
-	return i;
-}
-
-void Tree::buildPreorderTree(Node *node)
-{
-	int i;
-
-	i = writeData(node);
-	if (i < 0 || isDigit(node->data[0]))
-		return;
-	allocateNode(&node->left);
-	buildPreorderTree(node->left);
-
-	allocateNode(&node->right);
-	buildPreorderTree(node->right);
-	return;
-}
-
 float stringToFloat(std::string s_num)
 {
 	float f_num;
@@ -129,12 +94,9 @@ Node *Tree::getRoot(void)
 
 Tree::Tree(std::string *postfix_str, const int &postfix_len)
 {
-	_root = new Node;
-	_root->left = nullptr;
-	_root->right = nullptr;
 	_postfix_str = postfix_str;
 	_postfix_len = postfix_len;
-	buildPreorderTree(_root);
+	_root = buildTree();
 	return;
 }
 
@@ -143,4 +105,37 @@ Tree::~Tree(void)
 	delete _root;
 	_root = nullptr;
 	return;
+}
+
+Node *Tree::buildTree()
+{
+	Node *node_arr[_postfix_len];
+	int len = 0;
+	for (int i = 0; i < _postfix_len; i++)
+	{
+		if (isOperator(_postfix_str[i].at(0)))
+		{
+			Node *op = new Node;
+			op->data = _postfix_str[i];
+			op->left = node_arr[len - 2];
+			op->right = node_arr[len - 1];
+			node_arr[len - 2] = op;
+			node_arr[len - 1] = nullptr;
+			len -= 1;
+		}
+		else
+		{
+			node_arr[len] = new Node;
+			node_arr[len]->data = _postfix_str[i];
+			node_arr[len]->left = nullptr;
+			node_arr[len]->right = nullptr;
+			len++;
+		}
+		// for (int j = 0; j < len; j++) // debugging lines
+		// {
+		// 	std::cout << node_arr[j]->data << " | ";
+		// }
+		// std::cout << "\n";
+	}
+	return node_arr[0];
 }

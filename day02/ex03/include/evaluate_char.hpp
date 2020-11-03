@@ -3,6 +3,6 @@
 
 bool isDigit(const char &c);
 bool isOperator(const char &c);
-bool isGreaterPrecedenceOnStack(const char &stack_op, const char &new_op);
+bool isGreaterOrEqualPrecedenceOnStack(const char &stack_op, const char &new_op);
 
 #endif

@@ -16,7 +16,7 @@ Infix::~Infix(void)
 	return;
 }
 
-void Infix::findOperand(int &i)
+bool Infix::findOperand(int &i)
 {
 	std::string operand = "";
 	if (isDigit(_infix_str[i]))
@@ -31,8 +31,9 @@ void Infix::findOperand(int &i)
 		}
 		_postfix_arr[_arr_len] = operand;
 		_arr_len++;
+		return true;
 	}
-	return;
+	return false;
 }
 
 void Infix::dumpStackToPostfix(int &stack_len, const int &stop_dumping)
@@ -47,29 +48,42 @@ void Infix::dumpStackToPostfix(int &stack_len, const int &stop_dumping)
 	return;
 }
 
-void Infix::findOperator(const int &i)
+bool Infix::findOperator(const int &i)
 {
 	int stack_len = _stack.length();
 
 	if (isOperator(_infix_str[i]))
 	{
-		if (stack_len != 0 && isGreaterPrecedenceOnStack(_stack[stack_len - 1], _infix_str[i]) && _stack[stack_len - 1] != '(')
+		if (stack_len != 0 && isGreaterOrEqualPrecedenceOnStack(_stack[stack_len - 1], _infix_str[i]) && _stack[stack_len - 1] != '(')
 		{
-			dumpStackToPostfix(stack_len, 0);
+			size_t left_parenth_in_stack = _stack.find_last_of("(");
+
+			if (left_parenth_in_stack != std::string::npos)
+			{
+				dumpStackToPostfix(stack_len, (int)left_parenth_in_stack + 1);
+			}
+			else
+			{
+				dumpStackToPostfix(stack_len, 0);
+			}
 		}
 		_stack += _infix_str[i];
+		return true;
 	}
-	return;
+	return false;
 }
 
-void Infix::findLeftParenthesis(const int &i)
+bool Infix::findLeftParenthesis(const int &i)
 {
 	if (_infix_str[i] == '(')
+	{
 		_stack += _infix_str[i];
-	return;
+		return true;
+	}
+	return false;
 }
 
-void Infix::findRigtParenthesis(const int &i)
+bool Infix::findRigtParenthesis(const int &i)
 {
 	if (_infix_str[i] == ')')
 	{
@@ -86,38 +100,45 @@ void Infix::findRigtParenthesis(const int &i)
 			std::cout << "Error: no matching parenthesis\n";
 			exit(1);
 		}
+		return true;
 	}
-	return;
+	return false;
 }
 
-void Infix::dumpStackAtTheEnd(const int &i)
+bool Infix::dumpStackAtTheEnd(const int &i)
 {
 	int stack_len = _stack.length();
 
-	if (stack_len != 0 && !isOperator(_infix_str[i]) && i == (int)(_infix_str.length() - 1))
+	if (stack_len != 0 && _infix_str[i] == '\0')
 	{
 		dumpStackToPostfix(stack_len, 0);
+		return true;
 	}
-	return;
+	return false;
 }
 
 void Infix::toPostfix(void)
 {
+	int i;
 	// Edsger Dijkstra's Shunting Yard Algorithm
-	for (int i = 0; i < _arr_max; i++)
+	for (i = 0; i < _arr_max; i++)
 	{
-		findOperand(i);
-		findOperator(i);
-		findLeftParenthesis(i);
-		findRigtParenthesis(i);
-		dumpStackAtTheEnd(i);
-		// std::cout << "postfix array: "; // debugging lines
-		// for (int j = 0; j < _arr_max; j++)
-		// {
-		// 	std::cout << _postfix_arr[j] << " ";
-		// }
-		// std::cout << "\n";
+		if (findOperand(i))
+			;
+		else if (findOperator(i))
+			;
+		else if (findLeftParenthesis(i))
+			;
+		else if (findRigtParenthesis(i))
+			;
 	}
+	dumpStackAtTheEnd(i);
+	// std::cout << "postfix array: "; // debugging lines
+	// for (int j = 0; j < _arr_max; j++)
+	// {
+	// 	std::cout << _postfix_arr[j] << " ";
+	// }
+	// std::cout << "\n";
 	return;
 }
 

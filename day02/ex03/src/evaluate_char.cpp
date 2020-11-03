@@ -16,9 +16,12 @@ bool isOperator(const char &c)
 	return false;
 }
 
-bool isGreaterPrecedenceOnStack(const char &stack_op, const char &new_op)
+bool isGreaterOrEqualPrecedenceOnStack(const char &stack_op, const char &new_op)
 {
-	if ((stack_op == '*' || stack_op == '/') && (new_op == '+' || new_op == '-'))
+	int stack_op_precedence = (stack_op == '*' || stack_op == '/') ? 2 : 1;
+	int new_op_precedence = (new_op == '*' || new_op == '/') ? 2 : 1;
+
+	if (stack_op_precedence >= new_op_precedence)
 	{
 		return true;
 	}
