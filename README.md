@@ -410,7 +410,7 @@ cd; cd Desktop/cpp_piscine/day08/ex02/; make
 ```
 <br>**day08 ex03**<br>
 Mindopen is an interpreter of mindopen language (same as mindfuck, but with other symbols for the same commands). Mindopen interpreter does the following:
-1.  Opens a file, that contains mindopen code.
+1. Opens a file, that contains mindopen code.
 2. Reads instructions and creates a queue of instructions in memory. The interpreter has Instruction classes, one for each instruction in the language. Each Instruction class has its execute() method. And there is an interface to manipulate all those instructions and store them in a container.
 3. Executes each instruction in the queue.
 
@@ -427,3 +427,15 @@ cd; cd Desktop/cpp_piscine/day08/ex03/; make
 ./mindopen mo_mandelbrot.mo
 ```
 ![mindopen.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day08/gif/mindopen.jpg)
+
+<br>**day08 ex04**<br>
+Just like in day02/ex03 - evaluate a math expression, given as an argument. The expression can include integers and the + - / * operators.
+1. Tokenize the expression. Convert it to a Token derived objects.
+2. Convert infix notatin to postfix (Reverse Polish).
+3. Evaluate the expression, outputing every step to the standard output (cutrrent token, its application and resulting stack state)
+
+```
+cd; cd Desktop/cpp_piscine/day08/ex04/; make
+./evaluate "3 + ((1 + 4) * (8 / 4) ) - 1"
+```
+![evaluate.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day08/gif/evaluate.jpg)
