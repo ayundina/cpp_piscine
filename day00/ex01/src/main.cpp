@@ -1,108 +1,93 @@
-#include "../include/ClassPhonebook.hpp"
+#include "ClassPhonebook.hpp"
 
-std::string ShowMenu(void)
+std::string showMenu(void)
 {
 	std::string selection;
-	
+
 	system("clear");
-	std::cout << "\n\n\tWelcome to your Awesome Phonebook!\n\n";
-	std::cout << "\t1. Add new contact\n";
-	std::cout << "\t2. Search contact\n";
-	std::cout << "\t3. Exit\n\n";
-	std::cout << "\tYou selected ";
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "	Welcome to your Awesome Phonebook!";
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "	1. ADD";
+	std::cout << std::endl;
+	std::cout << "	2. SEARCH";
+	std::cout << std::endl;
+	std::cout << "	3. EXIT";
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "	You selected ";
 	std::getline(std::cin, selection);
-	std::cout << "\n";
-	std::cout << "\t--------------------------------------------\n";
+	std::cout << std::endl;
+	std::cout << "	--------------------------------------------";
+	std::cout << std::endl;
 	return selection;
 }
 
-int SelectContact(int index)
+bool add(std::string &menu_selection, Phonebook &phonebook, int &index)
 {
-	std::string contact_selected;
-	int selected;
-	
-	std::cout << "\tYou selected contact #";
-	std::getline(std::cin, contact_selected);
-	std::cout << "\n";
-	std::cout << "\t--------------------------------------------\n";
-	selected = contact_selected[0] - '0';
-	if (selected <= index && selected > 0)
-		return selected;
-	else
+	if (menu_selection.compare("1") == 0 ||
+			menu_selection.compare("ADD") == 0)
 	{
-		std::cout << "\tContact #" << selected << " does not exist or\n";
-		std::cout << "\tyour selection is invalid.\n";
-		std::cout << "\tPress Enter to go to the main menu.\n";
+		phonebook.addNewContact(index);
+		menu_selection = showMenu();
+		return true;
 	}
-	return 0;
+	return false;
 }
 
-int Add(Phonebook *phonebook, int index)
+bool search(std::string &menu_selection, Phonebook &phonebook, int &index)
 {
-	if (index < PB_SIZE)
+	if (menu_selection.compare("2") == 0 ||
+			menu_selection.compare("SEARCH") == 0)
 	{
-		std::cout << "\tYou are creating contact #";
-		std::cout << index + 1 << "/" << PB_SIZE << std::endl;
-		phonebook->AddNewContact(index);
-		std::cout << "\n\tNew contact is saved in the Phonebook.\n";
-		std::cout << "\tPress Enter to go to the main menu.\n";
+		phonebook.searchContact(index);
+		menu_selection = showMenu();
+		return true;
 	}
-	else
-	{
-		std::cout << "\n\t💩 Sorry, your Awesome Phonebook is full. ";
-		std::cout << "Please, exit to start again. 💩\n";
-	}
-	if (index < PB_SIZE)
-		index += 1;
-	std::cin.ignore();
-	return index;
+	return false;
 }
 
-void Search(Phonebook phonebook, int index)
+bool exit(const std::string &menu_selection)
 {
-	int contact_selected;
-	
-	std::cout << "\tSaved contacts:\n";
-	phonebook.ShowAllContacts(index);
-	std::cout << "\n\tSelect contact to view details\n\n";
-	contact_selected = SelectContact(index);
-	if (contact_selected)
+	if (menu_selection.compare("3") == 0 ||
+			menu_selection.compare("EXIT") == 0)
 	{
-		phonebook.PrintOneContact(contact_selected - 1);
-		std::cout << "\n\tPress Enter to go to the main menu.\n";
+		std::cout << "	See you again soon!\n\n";
+		return true;
 	}
-	std::cin.ignore();
-	return;
+	return false;
 }
 
 int main()
 {
-	std::string menu_selection = ShowMenu();
+	std::string menu_selection = showMenu();
 	int index = 0;
 	Phonebook phonebook;
-	
-	while (1)
+
+	try
 	{
-		if (menu_selection[0] == '1')
+		while (1)
 		{
-			index = Add(&phonebook, index);
-			menu_selection = ShowMenu();
-		}
-		else if (menu_selection[0] == '2')
-		{
-			Search(phonebook, index);
-			menu_selection = ShowMenu();
-		}
-		else if (menu_selection[0] == '3')
-		{
-			std::cout << "\tSee you again soon!\n\n";
-			break;
-		}
-		else
-		{
-			std::cout << "\tYour selection is invalid. Try again.\n";
-			menu_selection = ShowMenu();
+			if (add(menu_selection, phonebook, index))
+				;
+			else if (search(menu_selection, phonebook, index))
+				;
+			else if (exit(menu_selection))
+				break;
+			else
+			{
+				std::cout << "	Your selection is invalid. Try again.";
+				std::cout << std::endl;
+				menu_selection = showMenu();
+			}
 		}
 	}
+	catch (const std::exception &e)
+	{
+		std::cerr << "	Error: " << e.what() << std::endl;
+	}
+
 	return 0;
 }

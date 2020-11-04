@@ -2,21 +2,23 @@
 #define CLASSPHONEBOOK_H
 
 #include "ClassContact.hpp"
-#include <iostream>
 
 #define PB_SIZE 8
 
 class Phonebook
 {
-  Contact contact[PB_SIZE];
+private:
+	Contact _contact[PB_SIZE];
 
 public:
-  Phonebook(void);
-  ~Phonebook(void);
+	Phonebook();
+	~Phonebook();
 
-  void AddNewContact(int index);
-  void ShowAllContacts(int index);
-  void PrintOneContact(int index);
+	void addNewContact(int &index);
+	void searchContact(const int &index) const;
+	int selectContact(const int &index) const;
+	void printListOfContacts(const int &index) const;
+	void printContact(const int &index) const;
 };
 
 #endif

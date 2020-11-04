@@ -7,27 +7,27 @@
 class Contact
 {
 private:
-  std::string first_name;
-  std::string last_name;
-  std::string nickname;
-  std::string login;
-  std::string postal_address;
-  std::string email_address;
-  std::string phone_number;
-  std::string birthday_date;
-  std::string favorite_meal;
-  std::string underwear_color;
-  std::string darkest_secret;
+  std::string _first_name;
+  std::string _last_name;
+  std::string _nickname;
+  std::string _login;
+  std::string _postal_address;
+  std::string _email_address;
+  std::string _phone_number;
+  std::string _birthday_date;
+  std::string _favorite_meal;
+  std::string _underwear_color;
+  std::string _darkest_secret;
 
-  void PrintLimitedWidthField(std::string data, int width);
+  void PrintLimitedWidthField(const std::string &data, const int &width) const;
 
 public:
-  Contact(void);
-  ~Contact(void);
+  Contact();
+  ~Contact();
 
-  void New(void);
-  void PrintAllContacts(int index);
-  void PrintContact(void);
+  void addNew();
+  void printContactPreview(const int &index) const;
+  void printContactContent() const;
 };
 
 #endif
