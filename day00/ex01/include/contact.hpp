@@ -3,6 +3,9 @@
 
 #include <string>
 #include <iostream>
+#include <iomanip>
+
+#define PREVIEW_FIELD_WIDTH 10
 
 class Contact
 {
@@ -19,7 +22,7 @@ private:
   std::string _underwear_color;
   std::string _darkest_secret;
 
-  void PrintLimitedWidthField(const std::string &data, const int &width) const;
+  void printLimitedWidthField(const std::string &data) const;
 
 public:
   Contact();

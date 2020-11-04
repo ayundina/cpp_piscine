@@ -40,16 +40,16 @@ void Contact::addNew()
 	return;
 }
 
-void Contact::PrintLimitedWidthField(const std::string &data, const int &width) const
+void Contact::printLimitedWidthField(const std::string &data) const
 {
-	if ((int)data.length() > (width - 1))
+	if (data.length() > (PREVIEW_FIELD_WIDTH))
 	{
-		std::cout.write(data.c_str(), 7);
+		std::cout.write(data.c_str(), PREVIEW_FIELD_WIDTH - 1);
 		std::cout << ".";
 	}
 	else
 	{
-		std::cout.width(width);
+		std::cout << std::setw(PREVIEW_FIELD_WIDTH);
 		std::cout << std::right << data;
 	}
 	std::cout << " | ";
@@ -58,14 +58,10 @@ void Contact::PrintLimitedWidthField(const std::string &data, const int &width) 
 
 void Contact::printContactPreview(const int &index) const
 {
-	int width = 8;
-
-	std::cout.width(width);
-	std::cout << std::right << "	" << index << ".";
-	std::cout << " | ";
-	PrintLimitedWidthField(_first_name, width);
-	PrintLimitedWidthField(_last_name, width);
-	PrintLimitedWidthField(_nickname, width);
+	std::cout << "	" << index << ". | ";
+	printLimitedWidthField(_first_name);
+	printLimitedWidthField(_last_name);
+	printLimitedWidthField(_nickname);
 	std::cout << std::endl;
 	return;
 }
