@@ -11,12 +11,12 @@ NC = \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
-	@ echo "${GREEN}Compiled" $(NAME) "${NC}"
+	@ $(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+	@ echo "${GREEN}	Compiled" $(NAME) "${NC}"
 
 $(OBJS): $(SRCS)
-	$(CXX) $(CXXFLAGS) $(SRCS) -c
-	@ echo "${GREEN}Compiled object files${NC}"
+	@ $(CXX) $(CXXFLAGS) $(SRCS) -c
+	@ echo "${GREEN}	Compiled object files${NC}"
 
 clean:
 	$(RM) $(OBJS)
