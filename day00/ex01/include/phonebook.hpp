@@ -1,7 +1,7 @@
 #ifndef CLASSPHONEBOOK_H
 #define CLASSPHONEBOOK_H
 
-#include "ClassContact.hpp"
+#include "contact.hpp"
 
 #define PB_SIZE 8
 

@@ -3,10 +3,10 @@ CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
 
 FILES = main \
-				ClassContact \
-				ClassPhonebook
-HEADERS = ClassContact \
-					ClassPhonebook
+				contact \
+				phonebook
+HEADERS = contact \
+					phonebook
 
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp
