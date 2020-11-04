@@ -2,20 +2,21 @@
 #define PONY_H
 
 #include <iostream>
+#include <string>
 
 class Pony
 {
 public:
   Pony(std::string name, std::string color, std::string fav_food);
-  ~Pony(void);
+  ~Pony();
 
-  void eat(void) const;
-  void play(void) const;
-  void love(void) const;
-
-  std::string _name;
+  void eat() const;
+  void play() const;
+  void love() const;
+  const std::string &getName() const;
 
 private:
+  std::string _name;
   std::string _color;
   std::string _fav_food;
 };
