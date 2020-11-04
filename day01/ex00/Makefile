@@ -1,8 +1,10 @@
 NAME = pony
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
+
 FILES = main Pony
 HEADERS = Pony
+
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp
 OBJFOLDER = obj
@@ -25,10 +27,10 @@ $(OBJFOLDER)/%.o : $(SRCFOLDER)/%.cpp $(INCLUDE)
 
 clean:
 	@ $(RM) $(OBJFOLDER)
-	@ echo "${GREEN}	Cleaned objects${NC}"
+	@ echo "${GREEN}	Removed $(OBJFOLDER)${NC}"
 
 fclean: clean
 	@ $(RM) $(NAME)
-	@ echo "${GREEN}	Cleaned" $(NAME) "${NC}"
+	@ echo "${GREEN}	Removed $(NAME) ${NC}"
 
 re: fclean all
