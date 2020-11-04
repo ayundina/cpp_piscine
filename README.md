@@ -39,7 +39,7 @@ cd; cd Desktop/cpp_piscine/day00/ex01/; make
 ![phonebook.gif](https://github.com/ayundina/cpp_piscine/blob/master/day00/gif/phonebook_1.gif)
 
 **day00 ex02**<br>
-Recreat source code for the lost Account.class.cpp based on .hpp, tests and old .log file.
+Recreate a source code for the lost Account.class.cpp based on .hpp, tests and old .log file.
 ```
 cd; cd Desktop/cpp_piscine/day00/ex02/; make
 ./account
