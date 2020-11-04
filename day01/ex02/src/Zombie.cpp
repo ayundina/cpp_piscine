@@ -1,4 +1,4 @@
-#include "../include/Zombie.hpp"
+#include "Zombie.hpp"
 
 void Zombie::announce(std::string type) const
 {

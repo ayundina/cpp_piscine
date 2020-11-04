@@ -1,4 +1,4 @@
-#include "../include/main.hpp"
+#include "main.hpp"
 
 void showMessage(int message)
 {

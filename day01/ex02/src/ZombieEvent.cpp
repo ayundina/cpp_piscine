@@ -1,4 +1,4 @@
-#include "../include/ZombieEvent.hpp"
+#include "ZombieEvent.hpp"
 
 void ZombieEvent::setZombieType(std::string type)
 {

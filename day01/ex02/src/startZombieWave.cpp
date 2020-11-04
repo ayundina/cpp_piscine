@@ -1,4 +1,4 @@
-#include "../include/main.hpp"
+#include "main.hpp"
 
 #define MAX_NAMES 15
 
