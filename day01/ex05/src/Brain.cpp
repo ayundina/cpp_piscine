@@ -1,4 +1,4 @@
-#include "../include/Brain.hpp"
+#include "Brain.hpp"
 #include <sstream>
 
 Brain::Brain(void)
