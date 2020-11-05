@@ -1,6 +1,30 @@
 #include "../include/ZombieHorde.hpp"
 
-std::string ZombieHorde::randomName(void)
+ZombieHorde::ZombieHorde(const int &number)
+{
+	_number = number;
+	if (!(_horde = new Zombie *[_number + 1]))
+		memoryErrorMessage();
+	for (int i = 0; i < _number; i++)
+	{
+		if (!(_horde[i] = new Zombie(randomName())))
+			memoryErrorMessage();
+	}
+	announce();
+	return;
+}
+
+ZombieHorde::~ZombieHorde()
+{
+	for (int i = 0; i < _number; i++)
+	{
+		delete _horde[i];
+	}
+	delete[] _horde;
+	return;
+}
+
+std::string ZombieHorde::randomName()
 {
 	static int randomizer = 0;
 	randomizer += 1;
@@ -26,37 +50,13 @@ std::string ZombieHorde::randomName(void)
 	return random_name;
 }
 
-void ZombieHorde::memoryErrorMessage(void) const
+void ZombieHorde::memoryErrorMessage() const
 {
 	std::cout << "Error: out of memory\n";
-	exit (1);
+	exit(1);
 }
 
-ZombieHorde::ZombieHorde(int number)
-{
-	_number = number;
-	if (!(_horde = new Zombie*[_number + 1]))
-		memoryErrorMessage();
-	for (int i = 0; i < _number; i++)
-	{
-		if (!(_horde[i] = new Zombie(randomName())))
-			memoryErrorMessage();
-	}
-	announce();
-	return;
-}
-
-ZombieHorde::~ZombieHorde(void)
-{
-	for (int i = 0; i < _number; i++)
-	{
-		delete _horde[i];
-	}
-	delete[] _horde;
-	return;
-}
-
-void ZombieHorde::announce(void) const
+void ZombieHorde::announce() const
 {
 	for (int i = 0; i < _number; i++)
 	{

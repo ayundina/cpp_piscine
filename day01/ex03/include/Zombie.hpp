@@ -5,15 +5,15 @@
 
 class Zombie
 {
-public:
-	void announce(void) const;
-
-	Zombie(std::string name);
-	~Zombie(void);
-
 private:
 	std::string _type;
 	std::string _name;
+
+public:
+	Zombie(const std::string &name);
+	~Zombie();
+
+	void announce() const;
 };
 
 #endif

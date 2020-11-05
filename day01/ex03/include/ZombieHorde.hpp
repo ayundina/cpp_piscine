@@ -7,17 +7,17 @@
 
 class ZombieHorde
 {
-public:
-	Zombie **_horde;
-
-	ZombieHorde(int number);
-	~ZombieHorde(void);
-
 private:
 	int _number;
-	void announce(void) const;
-	void memoryErrorMessage(void) const;
-	std::string randomName(void);
+	Zombie **_horde;
+
+	void announce() const;
+	void memoryErrorMessage() const;
+	std::string randomName();
+
+public:
+	ZombieHorde(const int &number);
+	~ZombieHorde();
 };
 
 #endif

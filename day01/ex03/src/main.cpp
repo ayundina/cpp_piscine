@@ -1,6 +1,6 @@
 #include "../include/main.hpp"
 
-std::string requestInput(void)
+std::string requestInput()
 {
 	std::string input;
 	system("clear");
@@ -20,7 +20,7 @@ std::string requestInput(void)
 	}
 }
 
-int stringToNumber(std::string input_string)
+int stringToNumber(const std::string &input_string)
 {
 	int number = 0;
 	std::stringstream n(input_string);
@@ -28,14 +28,14 @@ int stringToNumber(std::string input_string)
 	return number;
 }
 
-int getNumber(void)
+int getNumber()
 {
 	std::string input = requestInput();
 	int number = stringToNumber(input);
 	return number;
 }
 
-int main(void)
+int main()
 {
 	int number = getNumber();
 	ZombieHorde appocalipse(number);
