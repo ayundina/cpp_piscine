@@ -5,16 +5,15 @@
 
 class ZombieEvent
 {
-public:
-	Zombie *newZombie(std::string name);
-
-	ZombieEvent(std::string type);
-	~ZombieEvent(void);
-
+private:
 	std::string _event_type;
 
-private:
-	void setZombieType(std::string type);
+public:
+	ZombieEvent(const std::string &type);
+	~ZombieEvent();
+
+	Zombie *newZombie(const std::string &name);
+	const std::string &getEventType() const;
 };
 
 #endif

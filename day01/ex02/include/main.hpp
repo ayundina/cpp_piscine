@@ -8,7 +8,7 @@
 #include <ctime>
 #include "ZombieEvent.hpp"
 
-void userChoise(int *number, std::string *type);
-void startZombieWave(int num_zombies, std::string type);
+void userChoise(int &number, std::string &type);
+void startZombieWave(const int &num_zombies, const std::string &type);
 
 #endif

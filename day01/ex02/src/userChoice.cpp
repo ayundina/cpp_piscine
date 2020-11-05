@@ -13,23 +13,23 @@ void showMessage(int message)
 	return;
 }
 
-void readNumber(int *number)
+void readNumber(int &number)
 {
 	std::string char_num = "";
 
 	std::getline(std::cin, char_num);
 	std::stringstream n(char_num);
-	n >> *number;
+	n >> number;
 	return;
 }
 
-void readType(std::string *type)
+void readType(std::string type)
 {
-	std::getline(std::cin, *type);
+	std::getline(std::cin, type);
 	return;
 }
 
-void userChoise(int *number, std::string *type)
+void userChoise(int &number, std::string &type)
 {
 	system("clear");
 	showMessage(1);

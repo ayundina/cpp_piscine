@@ -28,25 +28,25 @@ std::string randomName(void)
 	return random_name;
 }
 
-void randomChump(ZombieEvent *wave)
+void randomChump(ZombieEvent &event)
 {
 	std::string random_name = randomName();
-	Zombie *zombie = wave->newZombie(random_name);
+	Zombie *zombie = event.newZombie(random_name);
 
 	if (zombie != nullptr)
 	{
-		zombie->announce(wave->_event_type);
+		zombie->announce(event.getEventType());
 		delete zombie;
 	}
 	return;
 }
 
-void startZombieWave(int num_zombies, std::string type)
+void startZombieWave(const int &num_zombies, const std::string &type)
 {
-	ZombieEvent wave(type);
+	ZombieEvent event(type);
 	for (int i = 0; i < num_zombies; i++)
 	{
-		randomChump(&wave);
+		randomChump(event);
 	}
 	return;
 }
