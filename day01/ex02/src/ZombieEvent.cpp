@@ -2,9 +2,9 @@
 
 ZombieEvent::ZombieEvent(const std::string &type)
 {
-	_event_type = type;
+	setZombieType(type);
 	std::cout << "\n\tYou just created a wave of ";
-	std::cout << _event_type << " zombies... Watch out!\n";
+	std::cout << _type << " zombies... Watch out!\n";
 	return;
 }
 
@@ -14,13 +14,19 @@ ZombieEvent::~ZombieEvent()
 	return;
 }
 
+void ZombieEvent::setZombieType(const std::string &type)
+{
+	_type = type;
+	return;
+}
+
 Zombie *ZombieEvent::newZombie(const std::string &name)
 {
-	Zombie *new_zombie = new Zombie(name, _event_type);
+	Zombie *new_zombie = new Zombie(name, _type);
 	return new_zombie;
 }
 
 const std::string &ZombieEvent::getEventType() const
 {
-	return _event_type;
+	return _type;
 }

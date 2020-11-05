@@ -6,12 +6,13 @@
 class ZombieEvent
 {
 private:
-	std::string _event_type;
+	std::string _type;
 
 public:
 	ZombieEvent(const std::string &type);
 	~ZombieEvent();
 
+	void setZombieType(const std::string &type);
 	Zombie *newZombie(const std::string &name);
 	const std::string &getEventType() const;
 };
