@@ -1,22 +1,22 @@
 #include "Brain.hpp"
 #include <sstream>
 
-Brain::Brain(void)
+Brain::Brain()
 {
 	_iq = 100;
 	_address = this;
 	return;
 }
 
-Brain::~Brain(void)
+Brain::~Brain()
 {
 	return;
 }
 
-std::string Brain::identify(void) const
+std::string Brain::identify() const
 {
 	std::stringstream ss;
-	ss << (const void *)_address;
+	ss << _address;
 	std::string brain_address_str = ss.str();
 	return brain_address_str;
 }

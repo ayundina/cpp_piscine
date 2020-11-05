@@ -5,16 +5,15 @@
 
 class Human
 {
-	public:
+private:
+	const Brain _brain;
 
-	Human(void);
-	~Human(void);
+public:
+	Human();
+	~Human();
 
-	std::string identify(void) const;
-	Brain getBrain(void) const;
-
-	private:
-	Brain const _brain;
+	std::string identify() const;
+	Brain getBrain() const;
 };
 
 #endif

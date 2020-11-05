@@ -1,22 +1,22 @@
 #include "Human.hpp"
 
-Human::Human(void)
+Human::Human()
 {
 	return;
 }
 
-Human::~Human(void)
+Human::~Human()
 {
 	return;
 }
 
-std::string Human::identify(void) const
+std::string Human::identify() const
 {
 	std::string str = _brain.identify();
 	return str;
 }
 
-Brain Human::getBrain(void) const
+Brain Human::getBrain() const
 {
 	return _brain;
 }

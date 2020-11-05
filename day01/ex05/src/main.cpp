@@ -1,6 +1,6 @@
 #include "Human.hpp"
 
-int main(void)
+int main()
 {
 	Human bob;
 	std::cout << bob.identify() << std::endl;

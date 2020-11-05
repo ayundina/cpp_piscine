@@ -5,16 +5,15 @@
 
 class Brain
 {
-	public:
-
-	Brain(void);
-	~Brain(void);
-
-	std::string identify(void) const;
-
-	private:
+private:
 	int _iq;
-	Brain const *_address;
+	Brain *_address;
+
+public:
+	Brain();
+	~Brain();
+
+	std::string identify() const;
 };
 
 #endif
