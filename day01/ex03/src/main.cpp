@@ -1,4 +1,4 @@
-#include "../include/main.hpp"
+#include "main.hpp"
 
 std::string requestInput()
 {

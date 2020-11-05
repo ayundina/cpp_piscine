@@ -1,4 +1,4 @@
-#include "../include/ZombieHorde.hpp"
+#include "ZombieHorde.hpp"
 
 ZombieHorde::ZombieHorde(const int &number)
 {
