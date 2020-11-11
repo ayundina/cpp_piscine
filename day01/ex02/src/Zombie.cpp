@@ -9,7 +9,8 @@ Zombie::Zombie(const std::string &name, const std::string &type)
 
 Zombie::~Zombie()
 {
-	std::cout << "... And... " << _name << " is gone\n";
+	std::cout << "... And... " << _name << " is gone";
+	std::cout << std::endl;
 	return;
 }
 
