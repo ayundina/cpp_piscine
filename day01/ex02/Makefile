@@ -2,8 +2,8 @@ NAME = zombie
 CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
 
-FILES = main Zombie ZombieEvent userChoice startZombieWave
-HEADERS = main Zombie ZombieEvent
+FILES = main Zombie ZombieEvent
+HEADERS = Zombie ZombieEvent
 
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp

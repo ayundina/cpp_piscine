@@ -1,21 +1,21 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type)
+Zombie::Zombie(const std::string &name, const std::string &type)
 {
 	_name = name;
 	_type = type;
 	return;
 }
 
-Zombie::~Zombie(void)
+Zombie::~Zombie()
 {
 	std::cout << "... And... " << _name << " is gone\n";
 	return;
 }
 
-void Zombie::announce(std::string type) const
+void Zombie::announce() const
 {
-	std::cout << "\t" << type << " zombie " << _name << " says 'Braaaaaaiiins!'";
+	std::cout << "\t" << _type << " zombie " << _name << " says 'Braaaaaaiiins!'";
 	return;
 }
 

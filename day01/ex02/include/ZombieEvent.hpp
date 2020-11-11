@@ -2,19 +2,25 @@
 #define ZOMBIEEVENT_H
 
 #include "Zombie.hpp"
+#include <ctime>	 //std::srand()
+#include <cstdlib> //std::ctime()
+
+#define MAX_NAMES 15
 
 class ZombieEvent
 {
 private:
 	std::string _type;
 
+	std::string randomName();
+
 public:
-	ZombieEvent(const std::string &type);
+	ZombieEvent();
 	~ZombieEvent();
 
 	void setZombieType(const std::string &type);
 	Zombie *newZombie(const std::string &name);
-	const std::string &getEventType() const;
+	void randomChump();
 };
 
 #endif

@@ -2,6 +2,7 @@
 #define ZOMBIE_H
 
 #include <iostream>
+#include <string>
 
 class Zombie
 {
@@ -10,10 +11,10 @@ private:
 	std::string _name;
 
 public:
-	Zombie(std::string name, std::string type);
-	~Zombie(void);
+	Zombie(const std::string &name, const std::string &type);
+	~Zombie();
 
-	void announce(std::string type) const;
+	void announce() const;
 	const std::string &getType() const;
 	const std::string &getName() const;
 };
