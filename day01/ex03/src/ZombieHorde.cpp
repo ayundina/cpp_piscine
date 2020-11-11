@@ -3,12 +3,14 @@
 ZombieHorde::ZombieHorde(const int &number)
 {
 	_number = number;
-	if (!(_horde = new Zombie *[_number + 1]))
-		memoryErrorMessage();
+	std::srand(std::time(nullptr));
+
+	if (!(_horde = new Zombie *[_number]))
+		outOfMemoryErrorMessage();
 	for (int i = 0; i < _number; i++)
 	{
 		if (!(_horde[i] = new Zombie(randomName())))
-			memoryErrorMessage();
+			outOfMemoryErrorMessage();
 	}
 	announce();
 	return;
@@ -26,8 +28,6 @@ ZombieHorde::~ZombieHorde()
 
 std::string ZombieHorde::randomName()
 {
-	static int randomizer = 0;
-	randomizer += 1;
 	std::string name_list[MAX_NAMES] = {
 			"Dave",
 			"Silvia",
@@ -44,15 +44,15 @@ std::string ZombieHorde::randomName()
 			"Sus",
 			"Marla",
 			"Sucker"};
-	std::srand(std::time(nullptr) + randomizer);
 	int random_num = std::rand() % MAX_NAMES;
 	std::string random_name = name_list[random_num];
 	return random_name;
 }
 
-void ZombieHorde::memoryErrorMessage() const
+void ZombieHorde::outOfMemoryErrorMessage() const
 {
-	std::cout << "Error: out of memory\n";
+	std::cout << "Error: out of memory";
+	std::cout << std::endl;
 	exit(1);
 }
 

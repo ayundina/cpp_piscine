@@ -1,10 +1,13 @@
-#include "main.hpp"
+#include "ZombieHorde.hpp"
+#include <sstream>
 
-std::string requestInput()
+std::string getInput()
 {
 	std::string input;
 	system("clear");
-	std::cout << "\n\n\tEnter a number: ";
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "\tEnter a number: ";
 	std::getline(std::cin, input);
 	while (1)
 	{
@@ -30,7 +33,7 @@ int stringToNumber(const std::string &input_string)
 
 int getNumber()
 {
-	std::string input = requestInput();
+	std::string input = getInput();
 	int number = stringToNumber(input);
 	return number;
 }
@@ -38,6 +41,6 @@ int getNumber()
 int main()
 {
 	int number = getNumber();
-	ZombieHorde appocalipse(number);
+	ZombieHorde zombie_horde(number);
 	return 0;
 }

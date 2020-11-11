@@ -3,7 +3,7 @@ CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -g
 
 FILES = main Zombie ZombieHorde
-HEADERS = main Zombie ZombieHorde
+HEADERS = Zombie ZombieHorde
 
 SRCFOLDER = src
 SRC = $(FILES:%=$(SRCFOLDER)/%.cpp

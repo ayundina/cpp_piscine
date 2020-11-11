@@ -2,6 +2,8 @@
 #define ZOMBIEHORDE_H
 
 #include "Zombie.hpp"
+#include <ctime>	 // std::time()
+#include <cstdlib> //std::srand()
 
 #define MAX_NAMES 15
 
@@ -12,7 +14,7 @@ private:
 	Zombie **_horde;
 
 	void announce() const;
-	void memoryErrorMessage() const;
+	void outOfMemoryErrorMessage() const;
 	std::string randomName();
 
 public:
