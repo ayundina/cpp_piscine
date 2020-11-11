@@ -18,13 +18,3 @@ void Zombie::announce() const
 	std::cout << "\t" << _type << " zombie " << _name << " says 'Braaaaaaiiins!'";
 	return;
 }
-
-const std::string &Zombie::getType() const
-{
-	return _type;
-}
-
-const std::string &Zombie::getName() const
-{
-	return _name;
-}

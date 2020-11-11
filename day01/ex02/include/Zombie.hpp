@@ -15,8 +15,6 @@ public:
 	~Zombie();
 
 	void announce() const;
-	const std::string &getType() const;
-	const std::string &getName() const;
 };
 
 #endif
