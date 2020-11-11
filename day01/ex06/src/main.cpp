@@ -1,31 +1,30 @@
 /*
-Weapon class:
 
-_type string
-getType() - returns a reference to _type string
-setType()
+In which case is it appropriate to store the Weapon as a pointer?
 
+It is appropriate to store the Weapon as a pointer in second case.
+In initialization - HumanB jim("Jim") - pointer to the Weapon can be assigned
+to null.
+In - jim.setWeapon(club) - pointer the Weapon will be reassigned to club
 
-HumanA class: 
-HumanB class:
-Weapon ^
-name
-attack() - displays "NAME attacks with his WEAPON_TYPE"
+As a reference?
 
-code produces attacks with 
-"crude spiked club"
-THEN
-"some other type of club", in both test cases:
+It is appropriate to store the Weapon as a reference in first case.
+References (and const-qualified types) have to be initialized in initialization
+list and can not be reassigned.
 
-store the Weapon as a pointer? As a reference?
-Why? Is it the best choice in light of what’s asked? 
-These are the questions you should ask yourself before turning in this exercise.
+Why?
+
+Pointer, unlike reference can be set to null and be assigned to a value later.
+That makes case one appropriate to use a reference to store the Weapon and
+case two appropriate to use a pointer to store the Weapon.
+
 */
 
-#include "../include/HumanA.hpp"
-#include "../include/HumanB.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int main(void)
+int main()
 {
 	{
 		Weapon club = Weapon("crude spiked club");

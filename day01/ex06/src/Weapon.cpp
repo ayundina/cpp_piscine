@@ -1,32 +1,29 @@
-#include "../include/Weapon.hpp"
+#include "Weapon.hpp"
 
-// default constructor
-Weapon::Weapon(void)
+Weapon::Weapon()
 {
 	_type = "initial weapon type";
 	return;
 }
 
-Weapon::Weapon(std::string weapon_type)
+Weapon::Weapon(const std::string &weapon_type)
 {
 	_type = weapon_type;
 	return;
 }
 
-Weapon::~Weapon(void)
+Weapon::~Weapon()
 {
 	return;
 }
 
-void Weapon::setType(std::string type)
+void Weapon::setType(const std::string &type)
 {
 	_type = type;
 	return;
 }
 
-std::string &Weapon::getType(void)
+const std::string &Weapon::getType() const
 {
 	return _type;
 }
-
-// std::string _weapon;
