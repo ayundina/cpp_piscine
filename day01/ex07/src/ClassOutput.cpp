@@ -1,4 +1,15 @@
-#include "../include/main.hpp"
+#include "ClassOutput.hpp"
+
+Output::Output(const std::string &input_file_name)
+{
+	composeFileName(input_file_name, 0);
+	std::ofstream _output_file(_output_file_name);
+}
+
+Output::~Output(void)
+{
+	return;
+}
 
 void Output::write(std::string string)
 {
@@ -10,7 +21,7 @@ void Output::write(std::string string)
 	}
 	else
 	{
-		_error.showAndExit("Unable to open " + _output_file_name + "\nClassOutput.cpp line 14\n");
+		_error.showAndExit("Unable to open " + _output_file_name);
 	}
 	return;
 }
@@ -20,7 +31,7 @@ bool Output::alreadyExists(std::string file)
 	std::ifstream check;
 
 	check.open(file);
-	if(check.is_open())
+	if (check.is_open())
 	{
 		check.close();
 		return true;
@@ -40,14 +51,13 @@ std::string Output::uniqueName(std::string input_file_name, int extend)
 	}
 }
 
-void Output::composeFileName(std::string input_file_name, int extend)
+void Output::composeFileName(const std::string &input_file_name, int extend)
 {
 	std::string tmp_name = uniqueName(input_file_name, extend);
 
 	if (alreadyExists(tmp_name + ".replace"))
 	{
 		extend++;
-		_output_file_name = tmp_name + ".replace";
 		composeFileName(input_file_name, extend);
 		return;
 	}
@@ -55,18 +65,11 @@ void Output::composeFileName(std::string input_file_name, int extend)
 	{
 		_output_file_name = tmp_name + ".replace";
 		system("clear");
-		std::cout << "\n\n\t" << _output_file_name << " file is composed\n\n";
+		std::cout << std::endl
+							<< std::endl;
+		std::cout << "\t" << _output_file_name << " file is composed";
+		std::cout << std::endl
+							<< std::endl;
 		return;
 	}
-}
-
-Output::Output(std::string input_file_name)
-{
-	composeFileName(input_file_name, 0);
-	std::ofstream _output_file(_output_file_name);
-}
-
-Output::~Output(void)
-{
-	return;
 }

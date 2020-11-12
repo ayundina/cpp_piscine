@@ -14,16 +14,19 @@ Turn in some test files to show your program works.
 
 */
 
-#include "../include/main.hpp"
+#include "ClassErrorAndExit.hpp"
+#include "ClassInput.hpp"
+#include "ClassValidParams.hpp"
+#include "ClassOutput.hpp"
 
 void findAndReplace(std::string &line, std::string find_str, std::string replace_str)
 {
 	size_t pos = line.find(find_str, 0);
 
-	while(pos != std::string::npos)
+	while (pos != std::string::npos)
 	{
 		line.replace(pos, find_str.length(), replace_str);
-		pos = line.find(find_str, pos);
+		pos = line.find(find_str, pos + replace_str.length());
 	}
 	return;
 }
@@ -33,7 +36,7 @@ void readAndCopy(Input &input, Output &output, ValidParams params)
 	bool ret = false;
 	std::string line;
 
-	while((ret = input.getLine(line)))
+	while ((ret = input.getLine(line)))
 	{
 		findAndReplace(line, params.getFindString(), params.getReplaceString());
 		output.write(line + "\n");

@@ -1,21 +1,20 @@
 #ifndef CLASSINPUT_H
 #define CLASSINPUT_H
 
-#include "main.hpp"
+#include "ClassErrorAndExit.hpp"
+#include <fstream>
 
 class Input
 {
-	public:
-
-	Input(std::string input_file_name);
-	~Input(void);
-
-	bool getLine(std::string &line);
-
-	private:
-	
+private:
 	std::ifstream _input_file;
 	ErrorAndExit _error;
+
+public:
+	Input(const std::string &input_file_name);
+	~Input();
+
+	bool getLine(std::string &line);
 };
 
 #endif

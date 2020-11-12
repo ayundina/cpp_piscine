@@ -1,18 +1,17 @@
 #ifndef CLASSERRORANDEXIT_H
 #define CLASSERRORANDEXIT_H
 
-#include "main.hpp"
+#include <iostream>
+#include <string>
 
 class ErrorAndExit
 {
-	public:
+private:
+public:
+	ErrorAndExit();
+	~ErrorAndExit();
 
-	ErrorAndExit(void);
-	~ErrorAndExit(void);
-
-	void showAndExit(std::string str);
-
-	private:
+	void showAndExit(const std::string &str);
 };
 
 #endif

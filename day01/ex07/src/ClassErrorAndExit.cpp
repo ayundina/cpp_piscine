@@ -1,21 +1,24 @@
-#include "../include/main.hpp"
+#include "ClassErrorAndExit.hpp"
 
-void ErrorAndExit::showAndExit(std::string error_message)
+ErrorAndExit::ErrorAndExit()
+{
+	return;
+}
+
+ErrorAndExit::~ErrorAndExit()
+{
+	return;
+}
+
+void ErrorAndExit::showAndExit(const std::string &error_message)
 {
 	system("clear");
-	std::cout << "\n\n\t";
+	std::cout << std::endl
+						<< std::endl
+						<< "\t";
 	std::cout << error_message;
-	std::cout << "\n\n";
+	std::cout << std::endl
+						<< std::endl;
 	exit(1);
-	return;
-}
-
-ErrorAndExit::ErrorAndExit(void)
-{
-	return;
-}
-
-ErrorAndExit::~ErrorAndExit(void)
-{
 	return;
 }

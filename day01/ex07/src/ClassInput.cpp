@@ -1,13 +1,6 @@
-#include "../include/main.hpp"
+#include "ClassInput.hpp"
 
-bool Input::getLine(std::string &line)
-{
-	bool ret = false;
-	ret = bool(getline(_input_file, line));
-	return ret;
-}
-
-Input::Input (std::string input_file_name)
+Input::Input(const std::string &input_file_name)
 {
 	_input_file.open(input_file_name);
 	if (!_input_file.is_open())
@@ -16,8 +9,15 @@ Input::Input (std::string input_file_name)
 	}
 }
 
-Input::~Input(void)
+Input::~Input()
 {
 	_input_file.close();
 	return;
+}
+
+bool Input::getLine(std::string &line)
+{
+	bool ret = false;
+	ret = static_cast<bool>(getline(_input_file, line));
+	return ret;
 }
