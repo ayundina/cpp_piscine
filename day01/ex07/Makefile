@@ -34,4 +34,3 @@ fclean: clean
 	@ echo "${GREEN}	Removed $(NAME) ${NC}"
 
 re: fclean all
-
