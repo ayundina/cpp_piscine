@@ -1,6 +1,6 @@
 NAME = human
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror -g
+CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 FILES = main HumanA HumanB Weapon
 HEADERS = HumanA HumanB Weapon
@@ -23,7 +23,7 @@ $(NAME): $(OBJ)
 
 $(OBJFOLDER)/%.o : $(SRCFOLDER)/%.cpp $(INCLUDE)
 	@ mkdir -p $(OBJFOLDER)
-	@ $(CXX) $(CXXFLAGS) -I ./$(INCLFOLDER) $< -c -o $@
+		$(CXX) $(CXXFLAGS) -I ./$(INCLFOLDER) $< -c -o $@
 
 clean:
 	@ $(RM) $(OBJFOLDER)
