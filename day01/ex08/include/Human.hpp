@@ -7,12 +7,12 @@
 class Human
 {
 private:
-	void meleeAttack(std::string const &target);
-	void rangedAttack(std::string const &target);
-	void intimidatingShout(std::string const &target);
+	void meleeAttack(const std::string &target);
+	void rangedAttack(const std::string &target);
+	void intimidatingShout(const std::string &target);
 
 public:
-	void action(std::string const &action_name, std::string const &target);
+	void action(const std::string &action_name, const std::string &target);
 };
 
 #endif
