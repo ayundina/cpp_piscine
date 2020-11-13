@@ -1,50 +1,40 @@
 #include "../include/Human.hpp"
 
-void Human::meleeAttack(std::string const & target)
+void Human::meleeAttack(const std::string &target)
 {
-	std::cout << "\tMelee attack is used on " << target << "\n";
+	std::cout << "Human attacks " << target << " with a sword" << std::endl;
 	return;
 }
 
-void Human::rangedAttack(std::string const & target)
+void Human::rangedAttack(const std::string &target)
 {
-	std::cout << "\tRange attack on " << target << "\n";
+	std::cout << "Human attacks " << target << " with spears" << std::endl;
 	return;
 }
 
-void Human::intimidatingShout(std::string const & target)
+void Human::intimidatingShout(const std::string &target)
 {
-	std::cout << "\tIntimidating attack on " << target << "\n";
+	std::cout << "Human yells at " << target << std::endl;
 	return;
 }
 
-void Human::action(std::string const & action_name, std::string const & target)
+void Human::action(const std::string &action_name, const std::string &target)
 {
-	int i = std::stoi(action_name);
-	void (Human::*function_ptr[3])(std::string const &);
-	function_ptr[0] = &Human::meleeAttack;
-	function_ptr[1] = &Human::rangedAttack;
-	function_ptr[2] = &Human::intimidatingShout;
+	typedef void (Human::*FuncPtr)(const std::string &);
 
-	if (i >= 0 && i <= 2)
+	std::string action_arr[3] = {"melee", "range", "shout"};
+	FuncPtr function[3] = {&Human::meleeAttack,
+												 &Human::rangedAttack,
+												 &Human::intimidatingShout};
+
+	for (int i = 0; i < 3; i++)
 	{
-		(this->*(function_ptr[i]))(target);
+		if (action_arr[i] == action_name)
+		{
+			(this->*function[i])(target);
+			return;
+		}
 	}
-	else
-	{
-		std::cout << "\t" << action_name << " is incorrect action name\n"; 
-	}
+	std::cout << "\"" << action_name << "\" action is unknown" << std::endl;
 	return;
 }
-
-/*
-
-map<string,Std_interface∗> variable;
-map<string,Pstd_mem> operation;
-
-void call_member(string var, string oper)
-{
-	(variable[var]−>∗operation[oper])(); // var.oper()
-}
-
-*/

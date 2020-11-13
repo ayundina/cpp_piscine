@@ -14,9 +14,10 @@ using multiple if statements, or switch statements, is forbidden.
 int main(void)
 {
 	Human human;
-	human.action("0", "Richard");
-	human.action("1", "aircrafts");
-	human.action("2", "neighbour");
-	human.action("3", "neighbour");
+	human.action("melee", "Richard");
+	human.action("range", "target");
+	human.action("shout", "a neighbour");
+	human.action("kick", "a neighbour");
+	human.action("hug", "a neighbour");
 	return 0;
 }
