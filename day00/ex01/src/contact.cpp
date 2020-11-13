@@ -22,7 +22,7 @@ void Contact::addNew()
 	std::getline(std::cin, _nickname);
 	std::cout << "	4/" << fields << "	Login:			";
 	std::getline(std::cin, _login);
-	std::cout << "	5/" << fields << "	Postall address:	";
+	std::cout << "	5/" << fields << "	Postal address:	";
 	std::getline(std::cin, _postal_address);
 	std::cout << "	6/" << fields << "	Email address:		";
 	std::getline(std::cin, _email_address);

@@ -1,6 +1,6 @@
 NAME = megaphone
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 FILES = megaphone
 SRCS = $(FILES:%=%.cpp)
 OBJS = $(SRCS:.cpp=.o)

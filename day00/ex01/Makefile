@@ -1,6 +1,6 @@
 NAME = phonebook
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror -g
+CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 FILES = main \
 				contact \
