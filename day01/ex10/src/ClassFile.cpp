@@ -1,25 +1,4 @@
-#include "../include/ClassFile.hpp" 
-
-void File::readAndPrintOut(void)
-{
-	std::string line;
-	while (getline(_file, line))
-	{
-		std::cout << line << "\n";
-	}
-	_file.close();
-	return;
-}
-
-void File::open(void)
-{
-	_file.open(_file_name);
-	if (!_file.is_open())
-	{
-		std::cout << "cato9tails: " << _file_name << ": No such file or directory\n";
-	}
-	return;
-}
+#include "ClassFile.hpp"
 
 File::File(std::string file_name)
 {
@@ -27,7 +6,28 @@ File::File(std::string file_name)
 	return;
 }
 
-File::~File(void)
+File::~File()
 {
+	return;
+}
+
+void File::readAndPrintOut()
+{
+	std::string line;
+	while (getline(_file, line))
+	{
+		std::cout << line << std::endl;
+	}
+	_file.close();
+	return;
+}
+
+void File::open()
+{
+	_file.open(_file_name);
+	if (!_file.is_open())
+	{
+		std::cout << "cato9tails: " << _file_name << ": No such file or directory" << std::endl;
+	}
 	return;
 }

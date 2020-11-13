@@ -1,11 +1,21 @@
-#include "../include/ClassCat.hpp"
+#include "ClassCat.hpp"
 
-void Cat::standardInput(void)
+Cat::Cat()
+{
+	return;
+}
+
+Cat::~Cat()
+{
+	return;
+}
+
+void Cat::standardInput()
 {
 	std::string line;
-	while(getline(std::cin, line))
+	while (getline(std::cin, line))
 	{
-		std::cout << line << "\n";
+		std::cout << line << std::endl;
 	}
 	return;
 }
@@ -18,15 +28,5 @@ void Cat::file(int argc, char **argv)
 		file.open();
 		file.readAndPrintOut();
 	}
-	return;
-}
-
-Cat::Cat(void)
-{
-	return;
-}
-
-Cat::~Cat(void)
-{
 	return;
 }

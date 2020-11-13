@@ -6,19 +6,16 @@
 
 class File
 {
-	private:
-
+private:
 	std::fstream _file;
 	std::string _file_name;
 
-	public:
-
+public:
 	File(std::string file_name);
 	~File();
 
-	void readAndPrintOut(void);
-	void open(void);
-
+	void readAndPrintOut();
+	void open();
 };
 
 #endif

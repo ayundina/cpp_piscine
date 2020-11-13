@@ -7,15 +7,12 @@
 class Cat
 {
 private:
-
 public:
-
-	Cat(void);
-	~Cat(void);
+	Cat();
+	~Cat();
 
 	void file(int argc, char **argv);
-	void standardInput(void);
-
+	void standardInput();
 };
 
 #endif
