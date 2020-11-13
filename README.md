@@ -104,14 +104,14 @@ cd; cd Desktop/cpp_piscine/day01/ex07/; make
 ![replace.jpg](https://github.com/ayundina/cpp_piscine/blob/master/day01/gif/replace.jpg)
 
 **day01 ex08**<br>
-Invoke functions by using a pointer to member function. This was achieved by using an array of pointers to member functions.
+Invoke function by using an array of pointers to member functions.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex08/; make
 ./human
 ```
 
 <br>**day01 ex09**<br>
-As in the previous exercise, invoke functions by using a pointer to member function, but in this exercise, I used std::map with string and function pointer pair.
+As in the previous exercise, invoke a function by using an array of pointers to member functions.
 ```
 cd; cd Desktop/cpp_piscine/day01/ex09/; make
 ./logger

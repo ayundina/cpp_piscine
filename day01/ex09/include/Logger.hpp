@@ -4,26 +4,23 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <map>
+#include <ctime>
 
 class Logger
 {
 private:
-
 	std::ofstream log_file;
 	std::string log_file_name;
 
-	void logToConsole(std::string const &message);
-	void logToFile(std::string const &message);
-	std::string makeLogEntry(std::string const &message) const;
+	void logToConsole(const std::string &message);
+	void logToFile(const std::string &message);
+	std::string makeLogEntry(const std::string &message) const;
 
 public:
+	Logger();
+	~Logger();
 
-	Logger(void);
-	~Logger(void);
-
-	void log(std::string const &dest, std::string const &message);
-
+	void log(const std::string &dest, const std::string &message);
 };
 
 #endif
