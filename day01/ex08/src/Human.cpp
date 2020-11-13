@@ -1,4 +1,4 @@
-#include "../include/Human.hpp"
+#include "Human.hpp"
 
 void Human::meleeAttack(const std::string &target)
 {

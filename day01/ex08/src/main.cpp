@@ -9,7 +9,7 @@ using multiple if statements, or switch statements, is forbidden.
 
 */
 
-#include "../include/Human.hpp"
+#include "Human.hpp"
 
 int main(void)
 {
