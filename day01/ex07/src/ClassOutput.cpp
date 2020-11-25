@@ -6,7 +6,7 @@ Output::Output(const std::string &input_file_name)
 	std::ofstream _output_file(_output_file_name);
 }
 
-Output::~Output(void)
+Output::~Output()
 {
 	return;
 }
@@ -67,7 +67,7 @@ void Output::composeFileName(const std::string &input_file_name, int extend)
 		system("clear");
 		std::cout << std::endl
 							<< std::endl;
-		std::cout << "\t" << _output_file_name << " file is composed";
+		std::cout << "	" << _output_file_name << " file is composed";
 		std::cout << std::endl
 							<< std::endl;
 		return;

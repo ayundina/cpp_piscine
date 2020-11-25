@@ -7,7 +7,7 @@ std::string getInput()
 	system("clear");
 	std::cout << std::endl;
 	std::cout << std::endl;
-	std::cout << "\tEnter a number: ";
+	std::cout << "	Enter a number: ";
 	std::getline(std::cin, input);
 	while (1)
 	{
@@ -17,7 +17,7 @@ std::string getInput()
 		}
 		else
 		{
-			std::cout << "\tInvalid input. Try again. Enter a number: ";
+			std::cout << "	Invalid input. Try again. Enter a number: ";
 			std::getline(std::cin, input);
 		}
 	}

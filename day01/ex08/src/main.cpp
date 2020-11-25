@@ -1,17 +1,6 @@
-/*
-
-ClassHuman functions: 
-first three will simply output something to the
-the last one will have to call the appropriate action on the appropriate target.
-
-You must use an array of pointers to members to select which function to call:
-using multiple if statements, or switch statements, is forbidden.
-
-*/
-
 #include "Human.hpp"
 
-int main(void)
+int main()
 {
 	Human human;
 	human.action("melee", "Richard");

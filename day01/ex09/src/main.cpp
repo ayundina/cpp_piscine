@@ -1,6 +1,6 @@
 #include "Logger.hpp"
 
-int main(void)
+int main()
 {
 	Logger logger;
 	logger.log("console", "log message to console");

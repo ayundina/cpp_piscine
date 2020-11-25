@@ -16,6 +16,6 @@ Zombie::~Zombie()
 
 void Zombie::announce() const
 {
-	std::cout << "\t" << _type << " zombie " << _name << " says 'Braaaaaaiiins!'";
+	std::cout << "	" << _type << " zombie " << _name << " says 'Braaaaaaiiins!'";
 	return;
 }

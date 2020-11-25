@@ -28,8 +28,8 @@ private:
 	int _instruction_counter;
 	std::vector<int> _stack_open_bracket;
 
-	typedef AInstruction *(Queue::*fptrType)();
-	std::map<char, fptrType> _fptr;
+	typedef AInstruction *(Queue::*FuncPtr)();
+	std::map<char, FuncPtr> _fptr;
 
 	void pairBrackets();
 	void loop();

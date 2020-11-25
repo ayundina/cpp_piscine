@@ -1,19 +1,3 @@
-/*
-
-program ./replace
-takes a filename and
-two strings, s1 and s2, that are NOT empty.
-
-It will open the file
-write its contents to FILENAME.replace, 
-replacing every occurence of s1 with s2.
-
-Handle errors
-not use the C file manipulation functions
-Turn in some test files to show your program works.
-
-*/
-
 #include "ClassErrorAndExit.hpp"
 #include "ClassInput.hpp"
 #include "ClassValidParams.hpp"

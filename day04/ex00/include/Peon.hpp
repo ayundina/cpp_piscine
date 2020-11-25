@@ -12,7 +12,7 @@ private:
 public:
 	Peon(const std::string &name);
 	Peon(const Peon &peon);
-	~Peon(void);
+	virtual ~Peon(void); // virtual?
 	Peon &operator=(const Peon &peon);
 
 	void getPolymorphed(void) const;

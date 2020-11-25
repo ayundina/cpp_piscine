@@ -12,7 +12,7 @@ ValidParams::ValidParams(int argc, char **argv)
 	{
 		_valid = false;
 		_error.showAndExit(
-				"Invalid parameters!\n\t"
+				"Invalid parameters!\n	"
 				"Try ./replace input_file find_string replace_string");
 	}
 	return;
@@ -34,7 +34,7 @@ bool ValidParams::validateFile(const char *argv1)
 	else
 	{
 		_error.showAndExit(
-				"Invalid parameters!\n\t"
+				"Invalid parameters!\n	"
 				"Try ./replace input_file find_string replace_string");
 		_valid = false;
 	}
@@ -52,7 +52,7 @@ bool ValidParams::validateFindStr(const char *argv2)
 	else
 	{
 		_error.showAndExit(
-				"Invalid parameters!\n\t"
+				"Invalid parameters!\n	"
 				"Try ./replace input_file find_string replace_string");
 		_valid = false;
 	}
@@ -70,7 +70,7 @@ bool ValidParams::validateReplaceStr(const char *argv3)
 	else
 	{
 		_error.showAndExit(
-				"Invalid parameters!\n\t"
+				"Invalid parameters!\n	"
 				"Try ./replace input_file find_string replace_string");
 		_valid = false;
 	}

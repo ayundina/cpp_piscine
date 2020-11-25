@@ -8,7 +8,7 @@ void memoryLeak()
 	return;
 }
 
-int main(void)
+int main()
 {
 	memoryLeak();
 	return 0;

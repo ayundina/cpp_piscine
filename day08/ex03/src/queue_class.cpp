@@ -77,7 +77,7 @@ void Queue::addToQueue(const char &instruction)
 	_instruction = instruction;
 	if (!validInstruction())
 		return;
-	fptrType create_instruction = _fptr[_instruction];
+	FuncPtr create_instruction = _fptr[_instruction];
 	AInstruction *i = (this->*create_instruction)();
 	_queue.push_back(i);
 	_instruction_counter += 1;

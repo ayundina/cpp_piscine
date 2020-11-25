@@ -9,14 +9,14 @@ Zombie::Zombie(const std::string &name)
 
 Zombie::~Zombie()
 {
-	std::cout << "\t... And... " << _name << " is gone";
+	std::cout << "	... And... " << _name << " is gone";
 	std::cout << std::endl;
 	return;
 }
 
 void Zombie::announce() const
 {
-	std::cout << "\t" << _type << " zombie " << _name << " says 'Braaaaaaiiins!'";
+	std::cout << "	" << _type << " zombie " << _name << " says 'Braaaaaaiiins!'";
 	std::cout << std::endl;
 	return;
 }

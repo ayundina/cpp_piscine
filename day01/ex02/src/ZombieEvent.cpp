@@ -4,14 +4,14 @@ ZombieEvent::ZombieEvent()
 {
 	std::srand(std::time(nullptr));
 	std::cout << std::endl;
-	std::cout << "\tYou just created a wave of zombies... Watch out!";
+	std::cout << "	You just created a wave of zombies... Watch out!";
 	std::cout << std::endl;
 	return;
 }
 
 ZombieEvent::~ZombieEvent()
 {
-	std::cout << "\tThis wave is over... Hope you survived.";
+	std::cout << "	This wave is over... Hope you survived.";
 	std::cout << std::endl;
 	std::cout << std::endl;
 	return;

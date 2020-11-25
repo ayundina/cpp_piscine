@@ -8,26 +8,26 @@ void doSomeStuff(Pony *pony)
 	return;
 }
 
-void ponyOnTheStack(void)
+void ponyOnTheStack()
 {
 	Pony stack_pony("Stack Pony", "light brown", "carrot");
-	std::cout << "\t" << stack_pony.getName() << "'s address is ";
+	std::cout << "	" << stack_pony.getName() << "'s address is ";
 	std::cout << &stack_pony.getName() << std::endl;
 	doSomeStuff(&stack_pony);
 	return;
 }
 
-void ponyOnTheHeap(void)
+void ponyOnTheHeap()
 {
 	Pony *heap_pony = new Pony("Heap Pony", "ginger", "pumpkin");
-	std::cout << "\t" << heap_pony->getName() << "'s address is ";
+	std::cout << "	" << heap_pony->getName() << "'s address is ";
 	std::cout << &heap_pony->getName() << std::endl;
 	doSomeStuff(heap_pony);
 	delete heap_pony;
 	return;
 }
 
-int main(void)
+int main()
 {
 	ponyOnTheStack();
 	ponyOnTheHeap();

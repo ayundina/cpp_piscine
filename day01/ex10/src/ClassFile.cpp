@@ -27,7 +27,8 @@ void File::open()
 	_file.open(_file_name);
 	if (!_file.is_open())
 	{
-		std::cout << "cato9tails: " << _file_name << ": No such file or directory" << std::endl;
+		std::cout << "cato9tails: " << _file_name << ": No such file or directory";
+		std::cout << std::endl;
 	}
 	return;
 }

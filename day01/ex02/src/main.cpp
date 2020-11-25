@@ -7,11 +7,11 @@ void showMessage(int message)
 	{
 		std::cout << std::endl;
 		std::cout << std::endl;
-		std::cout << "\tEnter the NUMBER of zombies: ";
+		std::cout << "	Enter the NUMBER of zombies: ";
 	}
 	else if (message == 2)
 	{
-		std::cout << "\tEnter the TYPE of zombies: ";
+		std::cout << "	Enter the TYPE of zombies: ";
 	}
 	return;
 }
@@ -80,7 +80,7 @@ int main()
 		}
 		else if (number == 0 || type.length() == 0)
 		{
-			std::cout << "\tInvalid number or type. Try again.";
+			std::cout << "	Invalid number or type. Try again.";
 			userChoice(number, type);
 		}
 	}

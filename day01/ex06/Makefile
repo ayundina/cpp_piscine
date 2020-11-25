@@ -23,7 +23,7 @@ $(NAME): $(OBJ)
 
 $(OBJFOLDER)/%.o : $(SRCFOLDER)/%.cpp $(INCLUDE)
 	@ mkdir -p $(OBJFOLDER)
-		$(CXX) $(CXXFLAGS) -I ./$(INCLFOLDER) $< -c -o $@
+		$(CXX) $(CXXFLAGS) -I $(INCLFOLDER) $< -c -o $@
 
 clean:
 	@ $(RM) $(OBJFOLDER)

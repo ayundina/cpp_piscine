@@ -33,7 +33,7 @@ void Logger::logToFile(const std::string &message)
 	return;
 }
 
-std::string makeTimeStamp(void)
+std::string makeTimeStamp()
 {
 	std::time_t current_time = std::time(nullptr);
 	std::tm *time_ptr = std::localtime(&current_time);
