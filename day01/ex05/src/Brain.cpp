@@ -4,7 +4,6 @@
 Brain::Brain()
 {
 	_iq = 100;
-	_address = this;
 	return;
 }
 
@@ -16,7 +15,8 @@ Brain::~Brain()
 std::string Brain::identify() const
 {
 	std::stringstream ss;
-	ss << _address;
+
+	ss << this;
 	std::string brain_address_str = ss.str();
 	return brain_address_str;
 }

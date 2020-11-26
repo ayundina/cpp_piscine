@@ -3,7 +3,7 @@
 ZombieHorde::ZombieHorde(const int &number)
 {
 	_number = number;
-	std::srand(std::time(nullptr));
+	std::srand(std::time(NULL));
 
 	if (!(_horde = new Zombie *[_number]))
 		outOfMemoryErrorMessage();

@@ -1,6 +1,6 @@
 NAME = logger
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILES = main Logger 
 HEADERS = Logger

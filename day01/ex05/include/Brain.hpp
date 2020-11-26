@@ -8,7 +8,6 @@ class Brain
 {
 private:
 	int _iq;
-	Brain *_address;
 
 public:
 	Brain();

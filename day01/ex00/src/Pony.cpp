@@ -25,7 +25,7 @@ const std::string &Pony::getName() const
 	return _name;
 }
 
-Pony::Pony(std::string name, std::string color, std::string fav_food)
+Pony::Pony(const std::string &name, const std::string &color, const std::string &fav_food)
 {
 	_name = name;
 	_color = color;

@@ -13,7 +13,7 @@ public:
 	~Human();
 
 	std::string identify() const;
-	Brain getBrain() const;
+	const Brain &getBrain() const;
 };
 
 #endif

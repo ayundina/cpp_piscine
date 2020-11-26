@@ -1,6 +1,6 @@
 NAME = replace
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILES = main ClassInput ClassValidParams ClassErrorAndExit ClassOutput 
 HEADERS = ClassInput ClassValidParams ClassErrorAndExit ClassOutput

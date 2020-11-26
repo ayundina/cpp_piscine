@@ -12,7 +12,7 @@ private:
 	std::string _fav_food;
 
 public:
-	Pony(std::string name, std::string color, std::string fav_food);
+	Pony(const std::string &name, const std::string &color, const std::string &fav_food);
 	~Pony();
 
 	void eat() const;

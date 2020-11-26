@@ -2,7 +2,7 @@
 
 ZombieEvent::ZombieEvent()
 {
-	std::srand(std::time(nullptr));
+	std::srand(std::time(NULL));
 	std::cout << std::endl;
 	std::cout << "	You just created a wave of zombies... Watch out!";
 	std::cout << std::endl;

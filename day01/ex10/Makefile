@@ -1,6 +1,6 @@
 NAME = cato9tails
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILES = main ClassCat ClassFile
 HEADERS = ClassCat ClassFile

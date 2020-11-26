@@ -2,7 +2,7 @@
 
 HumanB::HumanB(const std::string &name)
 {
-	_weapon = nullptr;
+	_weapon = NULL;
 	_name = name;
 	return;
 }
